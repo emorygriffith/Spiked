@@ -1,26 +1,116 @@
  // Bourbon & Neat
 @import '../../bower_components/bourbon/dist/bourbon';
+@import '../../bower_components/bitters/app/assets/stylesheets/base';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 // Custom Styles
+*{
+  border: 1px solid gray;
+}
 body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+//header image and restaurant name////////////////////////////////////
+header{
+  width:100%;
+  height:400px;
+  background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/8e7DhTr06tBMfpp/15519294576_c438ee2909_k.jpg');
+
+  h1{
+    color:white;
+    text-align:center;
+    margin: 0 auto;
+    display:block;
+    padding-top:150px;
+  }
+}
+
+  .boxcontainer{
+    margin: 0 auto;
+  }
+
+  ul{
+    list-style-type:none;
+    text-align:center;
+
+
+  }
+////end header///////////////////////////////////////////////////
+
+
+//three floating boxes  (news, location, specials))/////////////////////////////
+    .middle{
+      height:300px;
+      width:100%;
+
+
+    }
+
+        .news{
+          background-color:blue;
+        }
+
+        .specials{
+          background-color:red;
+        }
+
+        .location{
+          background-color:gray;
+        }
+//////////////////////end middle boxes//////////////////////////////////
+
+////main tabs (menu)///////////////////////////////////////////////////
+  .maintabs{
+    width: 63%;
+    border: 1 px solid red;
+    height: 200px;
+    float: left;
+  }
+
+
+////end main tabs (menu, reservations)///////////////////////////////
+
+////////photo sidebar////////////////////////////////////////////////////
+
+.foodpics{
+  width: 27%;
+  float: right;
+}
+
+
+
+
+
+
+
+/////////end photo sidebar//////////////////////////////////////////////////
+
+//footer////////////////////////////////////////////////////////
+
+
+
+
+
+//end footer////////////////////////////////////////////////////////////////
+
+////// media query////////////////////////////////////////////////////////////
+
+@media (min-width:500px) {
+
+  h1 { font-size:9em;
+       padding-top:0px;
+    }
+
+
+}
+
+
+@media (min-width:900px) {
+
+  .middle{
+    width:33%;
+    display:inline-block;
   }
 }
