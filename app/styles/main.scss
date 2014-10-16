@@ -320,15 +320,11 @@ header{
   }
 }
 
-
-  .boxcontainer{
-    margin: 0 auto;
-  }
-
-  ul{
+  /* ul{
     list-style-type:none;
-  /*   text-align:center; */
-  }
+    display: inline-block;
+  text-align:center;
+  } */
 ////end header///////////////////////////////////////////////////
 
 
@@ -340,7 +336,7 @@ header{
 .hover-boxes-container{
   width: 100%;
 
-}
+  }
 .hover-tile-outer {
   $hover-tile-height: 10em;
 
@@ -424,12 +420,10 @@ background: url(http://sassyspoon.files.wordpress.com/2013/03/wood-fire-cooking.
 //////////////////////end middle boxes//////////////////////////////////
 
 ////main tabs (menu)///////////////////////////////////////////////////
-  .maintabs{
-    width: 63%;
-    border: 1 px solid red;
-    height: 200px;
-    float: left;
-  }
+.accord-tabs{
+  float: left;
+  width: 100%;
+}
 
 
 ////end main tabs (menu, reservations)///////////////////////////////
@@ -437,20 +431,17 @@ background: url(http://sassyspoon.files.wordpress.com/2013/03/wood-fire-cooking.
 ////////photo sidebar////////////////////////////////////////////////////
 
 .foodpics{
-
   float: right;
 
-}
-.photo{
 
-  height: 220px;
-  /* width: 220px; */
+}
+.one{
+
   border: 1px solid black;
+  background-color: red;
+  display: inline;
 }
 
-.bottom{
-  clear: both;
-}
 
 
 
@@ -473,7 +464,24 @@ header{
   background-size: 70%;
   height: 400px;
 }
+.foodpics{
+  display: block;
 
+  background-color: blue;
+}
+.photo{
+  border: 1px solid black;
+  background-color: red;
+  display: block;
+}
+.one{
+  height: 115px;
+
+}
+.accord-tabs{
+  width: 75%;
+
+}
 
 }
 
@@ -483,12 +491,10 @@ header{
     font-size:8em;
     padding-top:0px;
     }
-  .foodpics{
-    width: 25%;
-  }
+
   .hover-tile-outer{
     width:33.397%;
 
   }
-  
+
 }
