@@ -10,10 +10,10 @@ var rendered_temp1 = _.template(temp_string1);
 
 var test = $.getJSON(flickrUrl).done(function(x){
 	x.photos.photo.forEach(function(y){
-    $('.photo').append(rendered_temp1(y));
+    $('.flickrPhoto').append(rendered_temp1(y));
+		});
 	});
 
-console.log('The Iron Yard Rocks');
 $(".js-vertical-tab-content").hide();
 $(".js-vertical-tab-content:first").show();
 
