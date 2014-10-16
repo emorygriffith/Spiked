@@ -1,4 +1,3 @@
-
 //assign your api key equal to a variable
 var apiKey = '5543de5f4fb6de6783119447abc9951e';
 

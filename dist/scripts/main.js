@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 //assign your api key equal to a variable
 var apiKey = '5543de5f4fb6de6783119447abc9951e';
@@ -13,6 +14,14 @@ var test = $.getJSON(flickrUrl).done(function(x){
     $('.flickrPhoto').append(rendered_temp1(y));
 		});
 	});
+=======
+console.log('The Iron Yard Rocks');
+
+
+$('.news').on('click', function(){
+  $('.news').addClass('.large');
+})
+>>>>>>> emory
 
 $(".js-vertical-tab-content").hide();
 $(".js-vertical-tab-content:first").show();
