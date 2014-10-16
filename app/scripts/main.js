@@ -50,18 +50,23 @@ $.getJSON(menuUrl).done(
 
     pullingApi.entrees.forEach(
       function(pullingFromArray) {
-        sid_ID = pullingFromArray.id;
-        console.log(sid_ID);
+        ent_ID = pullingFromArray.id;
+        console.log(ent_ID);
          $('.entrees').append( showMenu(pullingFromArray));
           });
 
     pullingApi.sides.forEach(
       function(pullingFromArray) {
-        ent_ID = pullingFromArray.id;
-        console.log(ent_ID);
+        sid_ID = pullingFromArray.id;
+        console.log(sid_ID);
          $('.sides').append( showMenu(pullingFromArray));
        });
-
+       if (special_ID===ent_ID) {
+          (special_data=pullingFromArray.item)
+          (special_data=pullingFromArray.price)
+          (special_data=pullingFromArray.description)
+          //console.log(pullingFromArray.description);
+       }
 
 
     });
