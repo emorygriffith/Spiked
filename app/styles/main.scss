@@ -3,12 +3,10 @@
 @import '../../bower_components/bitters/app/assets/stylesheets/base';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
-<<<<<<< HEAD
+
 // Colors and Fonts
 
-=======
-<<<<<<< .merge_file_Fe1Mtr
->>>>>>> 9fa9c0a36c8659f6aae0e48997f7769b5adbff2c
+
 $color1:HSLA(240, 8%, 30%, 1);  //gunpowder
 $color2:HSLA(345, 48%, 43%, 1); //maroon
 $color3:HSLA(356, 58%, 52%, 1); //redi-ish
@@ -18,6 +16,7 @@ $color6:HSLA(159, 24%, 76%, 1); //mint
 $font1:'Lato';
 $font2:'PT Sans';
 $font3:'Oswald';
+$hover-tile-height2: 15em;
 
 //social media fonts
 @import url(http://weloveiconfonts.com/api/?family=brandico);
@@ -150,7 +149,7 @@ $font3:'Oswald';
   }
 
   .modal-inner {
-    @include transition(opacity .25s ease);
+    @include transition(opacity .3s ease);
     border-radius: $base-border-radius;
     background: $modal-background;
     margin: auto;
@@ -322,7 +321,7 @@ $font3:'Oswald';
       display: none;
     }
   }
-=======
+
 // Colors and Fonts
 $color1:HSLA(240, 8%, 30%, 1);  gunpowder
 $color2:HSLA(345, 48%, 43%, 1); maroon
@@ -357,7 +356,6 @@ $color6:HSLA(159, 24%, 76%, 1); mint
 body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
->>>>>>> .merge_file_Gswex9
 }
 
 // Based on code by Jett Miller jettmiller.net
@@ -372,9 +370,12 @@ body {
 //header image and restaurant name////////////////////////////////////
 header{
   width:100%;
-  height:400px;
-  background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/8e7DhTr06tBMfpp/15519294576_c438ee2909_k.jpg');
+  height:30%;
+  background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/BdPiHliNEUp0ISA/12246472246_9fca6e97d9_o.jpg');
+  background-size: 70%;
   background-attachment: fixed;
+  background-position: top;
+
 
   .socialicons{
     height:100px;
@@ -400,11 +401,10 @@ header{
     text-align:center;
     margin: 0 auto;
     display:block;
-    padding-top:150px;
-  &:hover{
-   color: lightgray;
+    padding-top: 10px;
+    padding-bottom: 150px;
 
-}
+
   }
 }
 
@@ -427,26 +427,27 @@ header{
 
 
 //hover boxes///////////////////////////////
+.hover-boxes-container{
+  width: 100%;
 
+}
 .hover-tile-outer {
-  $hover-tile-height: 12em;
+  $hover-tile-height: 10em;
 
   background-position: bottom;
   background-size: cover;
   /* background: url(); */
   background-size: cover;
-  background-color: HSLA(240, 8%, 30%, .5);
+  /* background-color: HSLA(240, 8%, 30%, .5); */
   height: $hover-tile-height;
   margin-bottom: $base-line-height;
   cursor: pointer;
-  border-radius: 3px;
-  display: inline-block;
+
   float:left;
-
-
+  margin-left: -1px;
 
   @include media($medium-screen) {
-    width: 33%;
+    width: 33.339%;
   }
 
   .hover-tile-container {
@@ -459,7 +460,7 @@ header{
   }
 
   .hover-tile {
-    @include transition(all, .3s ease-in-out);
+    @include transition(all, .9s ease-in-out);
     background:inherit;
     color: white;
     height:inherit;
@@ -467,32 +468,47 @@ header{
   }
 
   .hover-tile-visible {
-    color: HSLA(0, 0%, 83%, 1);
+    color: white;
     font-size: 2em;
     font-weight: 200;
     padding-top: 1.5em;
     text-align: center;
     @include shadow;
+    font-family: $font3;
   }
 
   .hover-tile-hidden {
-    background: transparentize(gray, .5);
+    background: transparentize(black, .2);
     overflow: scroll;
     text-align: justify;
     h4 {
-      color: $color1;
+      color: HSLA(0, 0%, 83%, 1);
       margin-bottom: .5em;
       font-family: $font1;
     }
     h5{
-      color: $color1;
+      color: HSLA(0, 0%, 83%, 1);
       font-family: $font3;
     }
     p {
-      color: $color1;
+      color: HSLA(0, 0%, 83%, 1);
 
     }
   }
+}
+.news{
+  background: url(http://sbmerge.com/wp-content/uploads/2013/01/anchor-woodfire-kitchen-santa-barbara.jpeg);
+
+}
+
+
+.specials{
+  background: url(http://www.heartkitchenji.com/myimages/copy_hdr1.jpg);
+  background-attachment: scroll;
+}
+.location{
+background-size: 60%;
+background: url(http://sassyspoon.files.wordpress.com/2013/03/wood-fire-cooking.jpg);
 }
 
 
@@ -544,20 +560,26 @@ header{
 ////// media query////////////////////////////////////////////////////////////
 
 @media (min-width:500px) {
+header{
+  background-size: 70%;
+  height: 400px;
+}
 
-  h1 { font-size:9em;
-       padding-top:0px;
-    }
-  .foodpics{
-    width: 27%;
-  }
 
 }
 
 
 @media (min-width:900px) {
+  h1 {
+    font-size:8em;
+    padding-top:0px;
+    }
+  .foodpics{
+    width: 25%;
+  }
   .hover-tile-outer{
-    width:33%;
+    width:33.397%;
 
   }
+
 }
