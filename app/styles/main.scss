@@ -3,7 +3,10 @@
 @import '../../bower_components/bitters/app/assets/stylesheets/base';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
+<<<<<<< HEAD
 // Colors and Fonts
+=======
+>>>>>>> ff05b7684dcfa4a8ed55bdb84ccdf831659db090
 $color1:HSLA(240, 8%, 30%, 1);  //gunpowder
 $color2:HSLA(345, 48%, 43%, 1); //maroon
 $color3:HSLA(356, 58%, 52%, 1); //redi-ish
@@ -13,6 +16,27 @@ $color6:HSLA(159, 24%, 76%, 1); //mint
 $font1:'Lato';
 $font2:'PT Sans';
 $font3:'Oswald';
+
+<<<<<<< HEAD
+@mixin logo{
+  font-family: $font3;
+  color: white;
+
+}
+
+@mixin headingFont{
+  font-family: $font1;
+  color: $color1;
+  font-size: 1.6em;
+
+}
+
+=======
+@mixin shadow{
+  -moz-box-shadow:    inset 0 0 10px #464652;
+  -webkit-box-shadow: inset 0 0 10px #464652;
+  box-shadow:         inset 0 0 10px #464652;
+}
 
 @mixin logo{
   font-family: $font3;
@@ -27,10 +51,12 @@ $font3:'Oswald';
 
 }
 
+>>>>>>> ff05b7684dcfa4a8ed55bdb84ccdf831659db090
 @mixin mainFont{
   font-family: $font2;
   font-weight: 200;
   color: $color1;
+<<<<<<< HEAD
 }
 
 *{
@@ -43,11 +69,275 @@ $font3:'Oswald';
 
 
 
+=======
+}
+
+/////modal popup
+.modal {
+  $modal-padding: 3em;
+  $modal-background: $base-background-color;
+  $modal-close-color: $light-gray;
+  $modal-image-height: 135px;
+  $modal-image-width: $modal-image-height;
+
+  label {
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+
+  label img {
+    $img-width: 300px;
+    border-radius: $img-width/2;
+    display: block;
+    max-width: $img-width;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .btn {
+    @include button(simple, $base-background-color);
+    font-size: $base-font-size;
+    margin-bottom: $base-line-height;
+  }
+
+  .modal-open {
+    overflow: hidden;
+  }
+
+  .modal-window { // overlay
+    @include transition(opacity .25s ease);
+    @include position(fixed, 0px 0px 0px 0px);
+    background: rgba(0,0,0, .85);
+    opacity: 0;
+    text-align: left;
+    visibility: hidden;
+    z-index: 99999999999;
+
+    .modal-bg {
+      @include position(absolute, 0px 0px 0px 0px);
+      cursor: pointer;
+    }
+  }
+
+  .modal-close {
+    @include position(absolute, ($modal-padding /2) ($modal-padding /2) 0 0);
+    @include size(1.5em);
+    cursor: pointer;
+    background: $modal-background;
+
+    &:after,
+    &:before {
+      @include position(absolute, 3px 3px 0 50%);
+      @include transform(rotate(45deg));
+      @include size(.15em 1.5em);
+      background: $modal-close-color;
+      content: '';
+      display: block;
+      margin: -3px 0 0 -1px;
+    }
+
+    &:hover:after,
+    &:hover:before {
+      background: darken($modal-close-color, 10);
+    }
+
+    &:before {
+      @include transform(rotate(-45deg));
+    }
+  }
+
+  .modal-inner {
+    @include transition(opacity .25s ease);
+    border-radius: $base-border-radius;
+    background: $modal-background;
+    margin: auto;
+    max-height: 95%;
+    position: relative;
+    overflow: auto;
+    width: 95%;
+    padding: $modal-padding /2;
+    margin-top: .6em;
+
+    @include media($medium-screen) {
+      padding: $modal-padding;
+      width: 60%;
+      max-height: 60%;
+      margin-top: 10em;
+    }
+
+    @include media($large-screen) {
+      width: 50%;
+      margin-top: 10em;
+    }
+
+    h1 {
+      color: $base-font-color;
+      margin-bottom: .6em;
+      text-align: left;
+      text-transform: capitalize;
+    }
+
+    p {
+      font-size: $base-font-size;
+      max-width: 100% !important;
+      padding: 0;
+      text-align: left;
+
+      &.intro {
+        color: $blue;
+        line-height: 1.6em;
+      }
+
+      &.body {
+        color: $base-font-color;
+        line-height: 1.45em;
+
+        @include media($medium-screen) {
+          @include columns(2 8em);
+        }
+      }
+    }
+
+    a.cta {
+      color: white;
+      display: inline-block;
+      margin-right: .5em;
+      margin-top: 1em;
+
+      &:last-child {
+        padding: 0 2em;
+      }
+    }
+  }
+
+  .modal-state:checked + .modal-window {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-state:checked + .modal-window .modal-inner {
+    top: 0;
+  }
+}
+
+// Based on code by Kasper Mikiewicz
+////accordion tabs////////////////////////
+.vertical-tabs-container { // small screens: accordion
+  $tab-border-color: $base-border-color;
+  $tab-border: 1px solid $tab-border-color;
+  $tab-border-radius: $base-border-radius;
+  $tab-content-background: lighten($tab-border-color, 10);
+  $tab-active-color: $tab-content-background;
+  $tab-inactive-color: $base-background-color;
+  $vertical-tabs-height: em(300);
+  $vertical-tab-mode: $medium-screen;
+
+  @include clearfix;
+  border-radius: $tab-border-radius;
+  border: $tab-border;
+  margin-bottom: $base-spacing;
+  overflow: hidden;
+
+  .vertical-tabs {
+    display: none;
+
+    @include media($vertical-tab-mode) {
+      background-color: $tab-inactive-color;
+      display: inline;
+      float: left;
+      height: $vertical-tabs-height;
+      width: 20%;
+    }
+  }
+
+  .vertical-tab {
+    @include media($vertical-tab-mode) {
+      border-bottom: $tab-border;
+      display: block;
+      font-weight: bold;
+      margin-right: -1px;
+      padding: $base-spacing/2 $gutter/2;
+
+      &.is-active {
+        background-color: $tab-content-background;
+        margin-right: -1px;
+      }
+    }
+  }
+
+  .vertical-tab:focus {
+    outline: none;
+  }
+
+  .vertical-tab-content-container {
+    display: block;
+    margin: 0 auto;
+
+    & a:focus {
+      outline: none;
+    }
+
+    @include media($vertical-tab-mode) {
+      display: inline-block;
+      @include size(80% $vertical-tabs-height);
+      background-color: $tab-content-background;
+    }
+  }
+
+  .vertical-tab-content {
+    background-color: $tab-content-background;
+    padding: $base-spacing $gutter;
+
+    @include media($vertical-tab-mode) {
+      border: none;
+      display: none;
+    }
+  }
+
+  .vertical-tab-accordion-heading {
+    background-color: $tab-inactive-color;
+    border-top: $tab-border;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    padding: $base-spacing/2 $gutter/2;
+
+    &:hover {
+      color: $base-accent-color;
+    }
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &.is-active {
+      background: $tab-active-color;
+      border-bottom: none;
+    }
+
+    @include media($vertical-tab-mode) {
+      display: none;
+    }
+  }
+}
+
+// Based on code by Jett Miller jettmiller.net
+
+
+
+
+
+
+/////////////////////////////////////////
+>>>>>>> ff05b7684dcfa4a8ed55bdb84ccdf831659db090
 //header image and restaurant name////////////////////////////////////
 header{
   width:100%;
   height:400px;
-  background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/8e7DhTr06tBMfpp/15519294576_c438ee2909_k.jpg');
+background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/8e7DhTr06tBMfpp/15519294576_c438ee2909_k.jpg');
+  background-attachment: fixed;
 
   h1{
     @include logo;
@@ -57,6 +347,10 @@ header{
     padding-top:150px;
 &:hover{
  color: lightgray;
+<<<<<<< HEAD
+=======
+
+>>>>>>> ff05b7684dcfa4a8ed55bdb84ccdf831659db090
 }
   }
 }
@@ -68,23 +362,42 @@ header{
 
   ul{
     list-style-type:none;
-    text-align:center;
-
-
+  /*   text-align:center; */
   }
 ////end header///////////////////////////////////////////////////
 
 
+
+
 //three floating boxes  (news, location, specials))/////////////////////////////
     .middle{
-      height:300px;
+      @include shadow;
+      font-family:$font3;
+      color: $color1;
+      height:250px;
       width:100%;
+      text-align: justify;
+      background-color:HSLA(240, 8%, 30%, .3);
+      padding: 10px;
+      border-radius: 2px;
+      margin-top: 0;
+      &:hover{
+      background-color:HSLA(240, 8%, 30%, .1);
+      transition: all .5s linear;
+      }
+    }
 
+    .middle-list{
+      padding-left: 0;
+    }
 
+    .titles{
+      @include headingFont;
     }
     .titles{
       @include headingFont;
 
+<<<<<<< HEAD
     }
         .news{
 
@@ -97,6 +410,78 @@ header{
         .location{
 
         }
+=======
+//hover boxes///////////////////////////////
+
+.hover-tile-outer {
+  $hover-tile-height: 12em;
+
+  background-position: bottom;
+  background-size: cover;
+  background: url("/images/mountains.png");
+  background-size: cover;
+  background-color: HSLA(240, 8%, 30%, .5);
+  height: $hover-tile-height;
+  margin-bottom: $base-line-height;
+  cursor: pointer;
+  border-radius: 3px;
+  display: inline-block;
+
+
+  @include media($medium-screen) {
+    width: 33%;
+  }
+
+  .hover-tile-container {
+    height: $hover-tile-height;
+    overflow: hidden;
+  }
+
+  .hover-tile-container:hover > .hover-tile {
+    @include transform(translate(0, -100%));
+  }
+
+  .hover-tile {
+    @include transition(all, .3s ease-in-out);
+    background:inherit;
+    color: white;
+    height:inherit;
+    padding: 1em 1.5em;
+  }
+
+  .hover-tile-visible {
+    color: $color1;
+    font-size: 2em;
+    font-weight: 200;
+    padding-top: 1.5em;
+    text-align: center;
+    @include shadow;
+  }
+
+  .hover-tile-hidden {
+    background: transparentize(gray, .5);
+    overflow: scroll;
+    text-align: justify;
+    h4 {
+      color: $color1;
+      margin-bottom: .5em;
+      font-family: $font1;
+    }
+    h5{
+      color: $color1;
+      font-family: $font3;
+    }
+    p {
+      color: $color1;
+
+    }
+  }
+}
+
+
+
+
+>>>>>>> ff05b7684dcfa4a8ed55bdb84ccdf831659db090
 //////////////////////end middle boxes//////////////////////////////////
 
 ////main tabs (menu)///////////////////////////////////////////////////
