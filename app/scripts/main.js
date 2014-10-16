@@ -1,4 +1,3 @@
-
 //assign your api key equal to a variable
 var apiKey = '5543de5f4fb6de6783119447abc9951e';
 
@@ -27,10 +26,6 @@ $(".js-vertical-tab").click(function(event) {
 
   $(".js-vertical-tab").removeClass("is-active");
   $(this).addClass("is-active");
-
-
-
-
 
   $(".js-vertical-tab-accordion-heading").removeClass("is-active");
   $(".js-vertical-tab-accordion-heading[rel^='"+activeTab+"']").addClass("is-active");

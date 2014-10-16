@@ -295,6 +295,26 @@ $hover-tile-height2: 15em;
 
 
 
+// Colors and Fonts
+$color1:HSLA(240, 8%, 30%, 1);  // gunpowder
+$color2:HSLA(345, 48%, 43%, 1); // maroon
+$color3:HSLA(356, 58%, 52%, 1); // redi-ish
+$color4:HSLA(39, 52%, 66%, 1);  // gold
+$color5:HSLA(333, 18%, 78%, 1); // silver
+$color6:HSLA(159, 24%, 76%, 1); // mint
+
+
+
+// Custom Styles
+
+
+body {
+  background: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
 
 // Based on code by Jett Miller jettmiller.net
 
@@ -426,6 +446,7 @@ background: url(http://sassyspoon.files.wordpress.com/2013/03/wood-fire-cooking.
 .accord-tabs{
   float: left;
   width: 100%;
+
 }
 
 
@@ -433,20 +454,29 @@ background: url(http://sassyspoon.files.wordpress.com/2013/03/wood-fire-cooking.
 
 ////////photo sidebar////////////////////////////////////////////////////
 
-.foodpics{
-  float: right;
-}
-.one{
+.flickrPhoto{
+  float:left;
+  img{
+    height:200px;
+    width:200px;
+  }
 
-  border: 1px solid black;
-  background-color: red;
-  display: inline;
 }
-
 
 
 
 /////////end photo sidebar//////////////////////////////////////////////////
+
+/////////map/////////////
+.map{
+  clear:both;
+}
+
+
+
+//////////end map//////////
+
+
 
 //footer////////////////////////////////////////////////////////
 
@@ -481,7 +511,10 @@ header{
 
 }
 
+.accord-tabs{
+  width: 75%;
 
+}
   header{
     background-size: 70%;
     height: 400px;
@@ -503,4 +536,9 @@ header{
     width: 75%;
   }
 
+  .rightbox{
+    float:right;
+    display:inline-block;
+    width:20%;
+  }
 }
