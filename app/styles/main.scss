@@ -4,40 +4,44 @@
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 // Colors and Fonts
-$color1:HSLA(240, 8%, 30%, 1);  gunpowder
-$color2:HSLA(345, 48%, 43%, 1); maroon
-$color3:HSLA(356, 58%, 52%, 1); redi-ish
-$color4:HSLA(39, 52%, 66%, 1);  gold
-$color5:HSLA(333, 18%, 78%, 1); silver
-$color6:HSLA(159, 24%, 76%, 1); mint
+$color1:HSLA(240, 8%, 30%, 1);  //gunpowder
+$color2:HSLA(345, 48%, 43%, 1); //maroon
+$color3:HSLA(356, 58%, 52%, 1); //redi-ish
+$color4:HSLA(39, 52%, 66%, 1);  //gold
+$color5:HSLA(333, 18%, 78%, 1); //silver
+$color6:HSLA(159, 24%, 76%, 1); //mint
+$font1:'Lato';
+$font2:'PT Sans';
+$font3:'Oswald';
 
 @mixin logo{
+  font-family: $font3;
+  color: white;
 
 }
+
 @mixin headingFont{
+  font-family: $font1;
+  color: $color1;
+  font-size: 1.6em;
 
 }
 
 @mixin mainFont{
-  font-family:
-  font-weight:
-  font-size:
-  color:
+  font-family: $font2;
+  font-weight: 200;
+  color: $color1;
 }
 
-
+*{
+  border: 1px solid black;
+}
 
 
 
 // Custom Styles
-*{
-  border: 1px solid gray;
-}
 
-body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+
 
 //header image and restaurant name////////////////////////////////////
 header{
@@ -46,13 +50,17 @@ header{
   background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/8e7DhTr06tBMfpp/15519294576_c438ee2909_k.jpg');
 
   h1{
-    color:white;
+    @include logo;
     text-align:center;
     margin: 0 auto;
     display:block;
     padding-top:150px;
+&:hover{
+ color: lightgray;
+}
   }
 }
+
 
   .boxcontainer{
     margin: 0 auto;
@@ -74,17 +82,20 @@ header{
 
 
     }
+    .titles{
+      @include headingFont;
 
+    }
         .news{
-          background-color:blue;
+
         }
 
         .specials{
-          background-color:red;
+
         }
 
         .location{
-          background-color:gray;
+
         }
 //////////////////////end middle boxes//////////////////////////////////
 
@@ -102,11 +113,16 @@ header{
 ////////photo sidebar////////////////////////////////////////////////////
 
 .foodpics{
-  width: 27%;
+
   float: right;
+
 }
+.photo{
 
-
+  height: 220px;
+  /* width: 220px; */
+  border: 1px solid black;
+}
 
 
 
@@ -122,6 +138,8 @@ header{
 
 //end footer////////////////////////////////////////////////////////////////
 
+//popout pannel//////////////////////////
+
 ////// media query////////////////////////////////////////////////////////////
 
 @media (min-width:500px) {
@@ -129,7 +147,9 @@ header{
   h1 { font-size:9em;
        padding-top:0px;
     }
-
+  .foodpics{
+    width: 27%;
+  }
 
 }
 
