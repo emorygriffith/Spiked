@@ -12,18 +12,12 @@
     <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
     <!-- endbower -->
     <!-- endbuild -->
-<<<<<<< HEAD
-<link href='http://fonts.googleapis.com/css?family=Lato|PT+Sans|Oswald' rel='stylesheet' type='text/css'>
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-
-=======
 
     <link href='http://fonts.googleapis.com/css?family=Lato|PT+Sans|Oswald' rel='stylesheet' type='text/css'>
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
->>>>>>> Dev
+
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -82,29 +76,11 @@
 
 
 
-<div class="bottom">
 
-  <div class="foodpics">
-
-    <ol>Food Photos...
-      <li class="photo">1</li>
-      <li class="photo">2</li>
-      <li class="photo">3</li>
-      <li class="photo">4</li>
-      <li class="photo">5</li>
-    </ol>
-
-  </div>
-
-
-
-
-
-
-</div> <!-- end div class bottom -->
 
 
 <!-- //menu/reservations tab -->
+<span class="accord-tabs">
 <div class="vertical-tabs-container">
   <div class="vertical-tabs">
     <a href="#" class="js-vertical-tab vertical-tab is-active" rel="tab1">Our Story</a>
@@ -114,17 +90,17 @@
   </div>
 
   <div class="vertical-tab-content-container">
-    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab1">Item 1</a>
+    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab1">Our Story</a>
     <div id="tab1" class="js-vertical-tab-content vertical-tab-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
+      <p>Once a small foodtruck, Spiked is thrilled to be bringing our signature street-food to the table.  </p>
     </div>
 
-    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab2">Item 2</a>
+    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab2">Menu</a>
     <div id="tab2" class="js-vertical-tab-content vertical-tab-content">
       <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum.</p>
     </div>
 
-    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab3">Item 3</a>
+    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab3">Drinks</a>
     <div id="tab3" class="js-vertical-tab-content vertical-tab-content">
       <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>
     </div>
@@ -135,15 +111,29 @@
       <p>Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.
         <div class="modal">
           <label for="modal-1">
-            <div class="btn js-btn">Click for Modal</div>
+            <div class="btn js-btn">Make a Reservation</div>
           </label>
           <input class="modal-state" id="modal-1" type="checkbox" />
           <div class="modal-window">
             <div class="modal-inner">
               <label class="modal-close" for="modal-1"></label>
-              <h1>Make a Reservation</h1>
-              <p class="intro">Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.</p>
-              <p class="body">Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam.</p>
+              <h2>Dine at Spiked</h2>
+              <p class="intro">Reserve a table</p>
+
+              <p class="body">
+  <label for="text2">
+<input type="text" size="8" name="text2" value="last name" id="text2" /></label>
+
+<label for="text2">
+<input type="text" size="8" name="text2" value="number of guests" id="text2" /></label>
+
+<label for="text2">
+<input type="text" size="8" name="text2" value="date" id="text2" /></label>
+
+<label for="text2">
+<input type="text" size="8" name="text2" value="time" id="text2" /></label>
+          </p>
+
             </div>
           </div>
 
@@ -153,6 +143,7 @@
   </div>
 </div>
   </div>
+
 
   <span class="flickrPhoto"></span>
 
@@ -164,7 +155,21 @@
 
 </script>
 
+
+</span>
+
 <!-- end menu tabs -->
+
+<div class="bottom">
+
+  <div class="foodpics">
+<span></span>
+
+    </div>
+
+  </div>
+
+ <!-- end div class bottom -->
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
