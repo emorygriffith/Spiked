@@ -20,30 +20,28 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+
+
+
+
+
   </head>
   <body>
 
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
-
-        <li>Sass</li>
 
 
-        <li>Modernizr</li>
+        <span class="photo"></span>
+
+<iframe class="map"width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=11101%2041st%20Ave%2C%20Flushing%2C%20NY%2011368&key=AIzaSyCC71DBCSEXuZPctvLtGxYQCT6MeQKfxvs"></iframe>
+    
 
 
-        <li>Bourbon & Neat</li>
 
 
-        <li>UnderscoreJS</li>
+  <script id="photo" type="text/template">
+    <img src='https://farm<%=farm%>.staticflickr.com/<%=server%>/<%=id%>_<%=secret%>.jpg'/>
 
-      </ul>
-      <p>Don't forget to update your readme file!!</p>
-    </div>
+  </script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -51,7 +49,7 @@
     <script src="../bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
+          <script src="scripts/google.js"></script>
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
