@@ -3,10 +3,8 @@
 @import '../../bower_components/bitters/app/assets/stylesheets/base';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
-<<<<<<< HEAD
 // Colors and Fonts
-=======
->>>>>>> ff05b7684dcfa4a8ed55bdb84ccdf831659db090
+
 $color1:HSLA(240, 8%, 30%, 1);  //gunpowder
 $color2:HSLA(345, 48%, 43%, 1); //maroon
 $color3:HSLA(356, 58%, 52%, 1); //redi-ish
@@ -17,7 +15,15 @@ $font1:'Lato';
 $font2:'PT Sans';
 $font3:'Oswald';
 
-<<<<<<< HEAD
+//social media fonts
+@import url(http://weloveiconfonts.com/api/?family=brandico);
+
+/* brandico */
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif;
+}
+//////////
+
 @mixin logo{
   font-family: $font3;
   color: white;
@@ -31,7 +37,7 @@ $font3:'Oswald';
 
 }
 
-=======
+
 @mixin shadow{
   -moz-box-shadow:    inset 0 0 10px #464652;
   -webkit-box-shadow: inset 0 0 10px #464652;
@@ -51,26 +57,17 @@ $font3:'Oswald';
 
 }
 
->>>>>>> ff05b7684dcfa4a8ed55bdb84ccdf831659db090
+
 @mixin mainFont{
   font-family: $font2;
   font-weight: 200;
   color: $color1;
-<<<<<<< HEAD
-}
 
-*{
-  border: 1px solid black;
 }
-
 
 
 // Custom Styles
 
-
-
-=======
-}
 
 /////modal popup
 .modal {
@@ -331,13 +328,31 @@ $font3:'Oswald';
 
 
 /////////////////////////////////////////
->>>>>>> ff05b7684dcfa4a8ed55bdb84ccdf831659db090
+
 //header image and restaurant name////////////////////////////////////
 header{
   width:100%;
   height:400px;
 background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/8e7DhTr06tBMfpp/15519294576_c438ee2909_k.jpg');
   background-attachment: fixed;
+
+  .socialicons{
+    height:100px;
+    width:25%;
+    background-color:white;
+    opacity:.5;
+    margin-top:15px;
+    margin-right:15px;
+    float:right;
+    font-size:60px;
+    border-radius:15px;
+  }
+
+  .social{
+    margin-left:30px;
+    padding-top:18px;;
+    color:blue;
+  }
 
   h1{
     @include logo;
@@ -347,10 +362,7 @@ background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363
     padding-top:150px;
 &:hover{
  color: lightgray;
-<<<<<<< HEAD
-=======
 
->>>>>>> ff05b7684dcfa4a8ed55bdb84ccdf831659db090
 }
   }
 }
@@ -397,7 +409,7 @@ background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363
     .titles{
       @include headingFont;
 
-<<<<<<< HEAD
+
     }
         .news{
 
@@ -410,7 +422,7 @@ background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363
         .location{
 
         }
-=======
+
 //hover boxes///////////////////////////////
 
 .hover-tile-outer {

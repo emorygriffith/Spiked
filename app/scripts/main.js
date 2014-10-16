@@ -1,10 +1,10 @@
 console.log('The Iron Yard Rocks');
-<<<<<<< HEAD
+
 
 $('.news').on('click', function(){
   $('.news').addClass('.large');
 })
-=======
+
 $(".js-vertical-tab-content").hide();
 $(".js-vertical-tab-content:first").show();
 
@@ -37,4 +37,3 @@ $(".js-vertical-tab-accordion-heading").click(function(event) {
   $(".js-vertical-tab").removeClass("is-active");
   $(".js-vertical-tab[rel^='"+accordion_activeTab+"']").addClass("is-active");
 });
->>>>>>> ff05b7684dcfa4a8ed55bdb84ccdf831659db090
