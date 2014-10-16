@@ -12,6 +12,7 @@ $color6:HSLA(159, 24%, 76%, 1); //mint
 $font1:'Lato';
 $font2:'PT Sans';
 $font3:'Oswald';
+$hover-tile-height2: 15em;
 
 @mixin shadow{
   -moz-box-shadow:    inset 0 0 10px #464652;
@@ -341,7 +342,7 @@ header{
 
 }
 .hover-tile-outer {
-  $hover-tile-height: 9em;
+  $hover-tile-height: 10em;
 
   background-position: bottom;
   background-size: cover;
@@ -487,7 +488,9 @@ header{
   }
   .hover-tile-outer{
     width:33.397%;
-    
+
+  }
+  .hover-tile-container{
 
   }
 }
