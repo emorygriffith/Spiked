@@ -333,7 +333,7 @@ $font3:'Oswald';
 header{
   width:100%;
   height:400px;
-background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/8e7DhTr06tBMfpp/15519294576_c438ee2909_k.jpg');
+  background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/8e7DhTr06tBMfpp/15519294576_c438ee2909_k.jpg');
   background-attachment: fixed;
 
   .socialicons{
@@ -360,8 +360,8 @@ background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363
     margin: 0 auto;
     display:block;
     padding-top:150px;
-&:hover{
- color: lightgray;
+  &:hover{
+   color: lightgray;
 
 }
   }
@@ -382,46 +382,8 @@ background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363
 
 
 //three floating boxes  (news, location, specials))/////////////////////////////
-    .middle{
-      @include shadow;
-      font-family:$font3;
-      color: $color1;
-      height:250px;
-      width:100%;
-      text-align: justify;
-      background-color:HSLA(240, 8%, 30%, .3);
-      padding: 10px;
-      border-radius: 2px;
-      margin-top: 0;
-      &:hover{
-      background-color:HSLA(240, 8%, 30%, .1);
-      transition: all .5s linear;
-      }
-    }
-
-    .middle-list{
-      padding-left: 0;
-    }
-
-    .titles{
-      @include headingFont;
-    }
-    .titles{
-      @include headingFont;
 
 
-    }
-        .news{
-
-        }
-
-        .specials{
-
-        }
-
-        .location{
-
-        }
 
 //hover boxes///////////////////////////////
 
@@ -430,7 +392,7 @@ background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363
 
   background-position: bottom;
   background-size: cover;
-  background: url("/images/mountains.png");
+  /* background: url(); */
   background-size: cover;
   background-color: HSLA(240, 8%, 30%, .5);
   height: $hover-tile-height;
@@ -438,6 +400,8 @@ background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363
   cursor: pointer;
   border-radius: 3px;
   display: inline-block;
+  float:left;
+
 
 
   @include media($medium-screen) {
@@ -462,7 +426,7 @@ background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363
   }
 
   .hover-tile-visible {
-    color: $color1;
+    color: HSLA(0, 0%, 83%, 1);
     font-size: 2em;
     font-weight: 200;
     padding-top: 1.5em;
@@ -491,9 +455,6 @@ background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363
 }
 
 
-
-
->>>>>>> ff05b7684dcfa4a8ed55bdb84ccdf831659db090
 //////////////////////end middle boxes//////////////////////////////////
 
 ////main tabs (menu)///////////////////////////////////////////////////
@@ -521,7 +482,9 @@ background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363
   border: 1px solid black;
 }
 
-
+.bottom{
+  clear: both;
+}
 
 
 
@@ -552,9 +515,8 @@ background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363
 
 
 @media (min-width:900px) {
-
-  .middle{
+  .hover-tile-outer{
     width:33%;
-    display:inline-block;
+
   }
 }
