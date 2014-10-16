@@ -3,10 +3,6 @@
 @import '../../bower_components/bitters/app/assets/stylesheets/base';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
-<<<<<<< .merge_file_RH7HCm
-<<<<<<< .merge_file_Zczewa
-<<<<<<< .merge_file_fpoFQ8
-<<<<<<< .merge_file_Fe1Mtr
 $color1:HSLA(240, 8%, 30%, 1);  //gunpowder
 $color2:HSLA(345, 48%, 43%, 1); //maroon
 $color3:HSLA(356, 58%, 52%, 1); //redi-ish
@@ -292,56 +288,11 @@ $hover-tile-height2: 15em;
       display: none;
     }
   }
-=======
-=======
->>>>>>> .merge_file_70hBnf
-=======
->>>>>>> .merge_file_OkhJB9
-=======
->>>>>>> .merge_file_265d2f
-// Colors and Fonts
-$color1:HSLA(240, 8%, 30%, 1);  gunpowder
-$color2:HSLA(345, 48%, 43%, 1); maroon
-$color3:HSLA(356, 58%, 52%, 1); redi-ish
-$color4:HSLA(39, 52%, 66%, 1);  gold
-$color5:HSLA(333, 18%, 78%, 1); silver
-$color6:HSLA(159, 24%, 76%, 1); mint
-
-@mixin logo{
-
-}
-@mixin headingFont{
 
 }
 
-@mixin mainFont{
-  font-family:
-  font-weight:
-  font-size:
-  color:
-}
-
-
-
-
-
-// Custom Styles
-*{
-  border: 1px solid gray;
-}
-
-body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
->>>>>>> .merge_file_Gswex9
-}
 
 // Based on code by Jett Miller jettmiller.net
-
-
-
-
-
 
 /////////////////////////////////////////
 //header image and restaurant name////////////////////////////////////
@@ -506,6 +457,7 @@ background: url(http://sassyspoon.files.wordpress.com/2013/03/wood-fire-cooking.
 ////// media query////////////////////////////////////////////////////////////
 
 @media (min-width:500px) {
+
 header{
   background-size: 70%;
   height: 400px;
@@ -528,6 +480,10 @@ header{
   width: 75%;
 
 }
+  header{
+    background-size: 70%;
+    height: 400px;
+  }
 
 }
 
