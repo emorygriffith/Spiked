@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // ************** FLICKR API SECTION ************** //
+=======
+>>>>>>> 2491e0ea4af517c30fde75125646e7686302e3ac
 //assign your api key equal to a variable
 var apiKey = '5543de5f4fb6de6783119447abc9951e';
 
