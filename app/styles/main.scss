@@ -414,8 +414,9 @@ header{
   background-attachment: scroll;
 }
 .location{
-background-size: 60%;
+/* background-size: 60%; */
 background: url(http://sassyspoon.files.wordpress.com/2013/03/wood-fire-cooking.jpg);
+width: 100%;
 }
 
 .map{
@@ -428,7 +429,17 @@ background: url(http://sassyspoon.files.wordpress.com/2013/03/wood-fire-cooking.
 .accord-tabs{
   float: left;
   width: 100%;
+}
 
+.interiorPic{
+  width: 100%;
+}
+
+.interiorPic2{
+  width: 45%;
+}
+.interiorPic3{
+  width: 45%;
 }
 
 
@@ -455,20 +466,9 @@ background: url(http://sassyspoon.files.wordpress.com/2013/03/wood-fire-cooking.
 }
 
 
-
 //////////end map//////////
 
 
-
-//footer////////////////////////////////////////////////////////
-
-
-
-
-
-//end footer////////////////////////////////////////////////////////////////
-
-//popout pannel//////////////////////////
 
 ////// media query////////////////////////////////////////////////////////////
 
@@ -518,5 +518,14 @@ header{
     float:right;
     display:inline-block;
     width:20%;
+  }
+  .interiorPic{
+    width: 100%;
+  }
+  .interiorPic2{
+    width: 30%;
+  }
+  .interiorPic3{
+    width: 30%;
   }
 }
