@@ -32,19 +32,19 @@
       <div class="entrees">ENTREES</div>
       <div class="sides">SIDES</div>
 
-      <div class="special"></div>
+      <div class="special">SPECIAL</div>
 
       <script type="text/template" id="newsApi">
         <div><%=title%></div>
         <div><%=post%></div>
-  
+
       </script>
 
 
 
       <script type="text/template" id="specialApi">
-        <div class="specialItem">ID: <%=description%></div>
-        <div class="menuItem">Menu Item: <%=item%></div>
+        <div class="specialItem">ID: <%=id%></div>
+        <div class="menuItem">Menu Item: <%=menu_item_id%></div>
       </script>
 
 
@@ -52,6 +52,10 @@
         <div class="item">Item: <%=item%></div>
         <div class="price">$<%=price%>.00</div>
         <div class="description">Description: <%=description%></div>
+      </script>
+      <script type="text/template" id="sidesApi">
+        <div class="item">Item: <%=item%></div>
+        <div class="price">$<%=price%>.00</div>
       </script>
 
 

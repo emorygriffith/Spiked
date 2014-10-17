@@ -1,75 +1,89 @@
 
-/*.........................................................*/
-/*.........................................................*/
+/*......................This is the News section...................................*/
+/*.................................................................................*/
 
-var newsTemplate = $('#newsApi').html();
-var showNews = _.template(newsTemplate);
-var newsUrl='http://restaurantapi.apiary-mock.com/news/latest';
+$(document).ready(function(){
 
-$.getJSON(newsUrl).done(
-  function (pullingApi) {
-    $('.news').append( showNews(pullingApi) );
-});
+    var newsTemplate = $('#newsApi').html();
+    var showNews = _.template(newsTemplate);
+    var newsUrl='http://restaurantapi.apiary-mock.com/news/latest';
 
-
-/*.........................................................*/
-/*.........................................................*/
+    $.getJSON(newsUrl).done(
+    function (pullingApi) {
+      $('.news').append( showNews(pullingApi) );
+    });
 
 
+    /*This is where the specialApi is called, but not implemented*/
+    /*The variables for the specialApi are set here along with the getJSon*/
 
-var specialTemplate = $('#specialApi').html();
-var showSpecial = _.template(specialTemplate);
-var specialUrl='http://restaurantapi.apiary-mock.com/menu/special';
-var special_ID;
 
-  $.getJSON(specialUrl).done(
-    function(special_data) {
-      special_ID = special_data.menu_item_id;
-        console.log(special_ID);
+
+    var specialTemplate = $('#specialApi').html();
+    var showSpecial = _.template(specialTemplate);
+    var specialUrl='http://restaurantapi.apiary-mock.com/menu/special';
+    var special_ID;
+
+    $.getJSON(specialUrl).done(
+      function(special_data) {
+        special_ID = special_data.menu_item_id;
+          });
+
+
+    var menuTemplate = $('#menuApi').html();
+    var showMenu = _.template(menuTemplate);
+
+    var sidesTemplate = $('#sidesApi').html();
+    var showSides = _.template(sidesTemplate);
+
+    var menuUrl='http://restaurantapi.apiary-mock.com/menu';
+    var app_ID;
+    var sid_ID;
+    var ent_ID;
+
+
+    /*......................This is the menuApi section...................................*/
+    /*.................................................................................*/
+
+    $.getJSON(menuUrl).done(function (pullingApi) {
+
+      pullingApi.appetizers.forEach(function(pullingFromArray) {
+          app_ID = pullingFromArray.id;
+          $('.appetizers').append( showMenu(pullingFromArray));
+
+            if(app_ID === special_ID) {
+
+              $('.special').append(showMenu(pullingFromArray));
+
+            };/*...........This is the end of the if statement...............*/
+
+        });/*.............This is the end of the APPETIZERS section..........*/
+
+$(document).ready(function(){
+
+      pullingApi.entrees.forEach(function(pullingFromArray) {
+          ent_ID = pullingFromArray.id;
+          $('.entrees').append( showMenu(pullingFromArray));
+
+            if(ent_ID === special_ID) {
+
+              $('.special').append(showMenu(pullingFromArray));
+
+            };/*...........This is the end of the if statement...............*/
+
+      });/*.............This is the end of the ENTREES section..........*/
+
+  });
+
+    pullingApi.sides.forEach(function(pullingFromArray) {
+        sid_ID = pullingFromArray.id;
+
+        $('.sides').append( showSides(pullingFromArray));
+        if(sid_ID === special_ID) {
+          $('.special').append(showSides(pullingFromArray));
+        };
         });
 
-
-  $.getJSON(specialUrl).done(
-    function (pullingApi) {
-      $('.special').append( showSpecial(pullingApi) );
-      });
-
-
-var menuTemplate = $('#menuApi').html();
-var showMenu = _.template(menuTemplate);
-var menuUrl='http://restaurantapi.apiary-mock.com/menu';
-var app_ID;
-var sid_ID;
-var ent_ID;
-
-  $.getJSON(menuUrl).done(
-    function (pullingApi) {
-
-      pullingApi.appetizers.forEach(
-        function(pullingFromArray) {
-          app_ID = pullingFromArray.id;
-          console.log(app_ID);
-         $('.appetizers').append( showMenu(pullingFromArray));
-          });
-
-      pullingApi.entrees.forEach(
-        function(pullingFromArray) {
-          ent_ID = pullingFromArray.id;
-          console.log(ent_ID);
-         $('.entrees').append( showMenu(pullingFromArray));
-          });
-
-    pullingApi.sides.forEach(
-      function(pullingFromArray) {
-        sid_ID = pullingFromArray.id;
-        console.log(sid_ID);
-         $('.sides').append( showMenu(pullingFromArray));
-          });
-
-       if (special_ID===ent_ID) {
-          (special_data=pullingFromArray.item)
-          (special_data=pullingFromArray.price)
-          (special_data=pullingFromArray.description)
-          }
-
     });
+
+});

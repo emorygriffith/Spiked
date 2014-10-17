@@ -3,52 +3,65 @@
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 // Custom Styles
+
+.container{
+  margin-left:50px;
+  margin-bottom:50px;
+}
 .description{
+  width:300px;
 
   border:solid;
   border-width:1px;
 }
 
 .item{
-
+    width:300px;
     border:solid;
     border-width:1px;
     background-color:orange;
 }
 
 .special{
+  width:300px;
   margin-top:50px;
 }
 
 .specialItem{
+  width:300px;
   border:solid;
   border-width:1px;
   background-color:yellow;
 }
 
 .menuItem{
+  width:300px;
   border:solid;
   border-width:1px;
   background-color:yellow;
 }
 
 .price{
+  width:300px;
   border:solid;
   border-width:1px;
   background-color:green;
 }
 
 .appetizers{
+  width:300px;
   margin-top:50px;
 
 }
 
 .entrees{
+  width:300px;
   margin-top:50px;
 
 }
 
 .sides{
+  width:300px;
   margin-top:50px;
 
 }
