@@ -27,10 +27,6 @@ $(".js-vertical-tab").click(function(event) {
   $(".js-vertical-tab").removeClass("is-active");
   $(this).addClass("is-active");
 
-
-
-
-
   $(".js-vertical-tab-accordion-heading").removeClass("is-active");
   $(".js-vertical-tab-accordion-heading[rel^='"+activeTab+"']").addClass("is-active");
 });

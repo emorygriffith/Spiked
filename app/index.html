@@ -23,6 +23,7 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+  
   </head>
   <body>
     <header>
@@ -63,9 +64,10 @@
     Location
   </div>
   <div class="hover-tile hover-tile-hidden">
-    <h4>Location</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, hic, dolore, labore,provident eligendi fugiat ad exercitationem.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum laborum dicta et odit cumque, ullam soluta sapiente consequuntur aspernatur quos error eius omnis aliquid mollitia facere incidunt! Doloribus, deserunt, eveniet.
+    <p>
+      <iframe class="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=11101%2041st%20Ave%2C%20Flushing%2C%20NY%2011368&key=AIzaSyCC71DBCSEXuZPctvLtGxYQCT6MeQKfxvs"></iframe>
+
+
     </p>
   </div>
 </div>
@@ -143,31 +145,30 @@
   </div>
 </div>
   </div>
+</span>
 
 
+
+<div class="rightbox">
   <span class="flickrPhoto"></span>
+</div>
 
-<iframe class="map"width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=11101%2041st%20Ave%2C%20Flushing%2C%20NY%2011368&key=AIzaSyCC71DBCSEXuZPctvLtGxYQCT6MeQKfxvs"></iframe>
 
 
 <script id="photo" type="text/template">
-<img src='https://farm<%=farm%>.staticflickr.com/<%=server%>/<%=id%>_<%=secret%>.jpg'/>
+<img class="apipics" src='https://farm<%=farm%>.staticflickr.com/<%=server%>/<%=id%>_<%=secret%>.jpg'/>
 
 </script>
 
 
-</span>
+
+
 
 <!-- end menu tabs -->
 
-<div class="bottom">
 
-  <div class="foodpics">
-<span></span>
 
-    </div>
 
-  </div>
 
  <!-- end div class bottom -->
 
