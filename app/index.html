@@ -98,6 +98,47 @@
     <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab2">Menu</a>
     <div id="tab2" class="js-vertical-tab-content vertical-tab-content">
       <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum.</p>
+      <!--This is the beginning of the Menu section-->
+      <div class="everything">
+           <div class="menunews">NEWS: </div>
+
+
+           <div class="appetizers">APPETIZERS</div>
+           <div class="entrees">ENTREES</div>
+
+
+           <div class="sides">SIDES</div>
+
+           <div class="special">SPECIAL</div>
+
+           <script type="text/template" id="newsApi">
+             <div><%=title%></div>
+             <div><%=post%></div>
+
+           </script>
+
+
+
+           <script type="text/template" id="specialApi">
+             <div class="specialItem">ID: <%=id%></div>
+             <div class="menuItem">Menu Item: <%=menu_item_id%></div>
+           </script>
+
+
+           <script type="text/template" id="menuApi">
+             <div class="item">Item: <%=item%></div>
+             <div class="price">$<%=price%>.00</div>
+             <div class="description">Description: <%=description%></div>
+             <div class="extraInfo">Allegies:<%=allergies%>  Fovorite:<%=favorite%> Spicy:<%=spicy%> Vegan:<%=vegan%></div>
+           </script>
+
+           <script type="text/template" id="sidesApi">
+             <div class="item">Item: <%=item%></div>
+             <div class="price">$<%=price%>.00</div>
+           </script>
+
+         </div><!--This is the end of the everything container-->
+         <!--This is the end of the Menu section-->
     </div>
 
     <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab3">Drinks</a>
@@ -170,6 +211,8 @@
   </div>
 
  <!-- end div class bottom -->
+
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
