@@ -15,6 +15,14 @@ $font2:'PT Sans';
 $font3:'Oswald';
 $hover-tile-height2: 15em;
 
+@import url(http://weloveiconfonts.com/api/?family=brandico);
+
+/* brandico */
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif;
+}
+
+
 @mixin shadow{
   -moz-box-shadow:    inset 0 0 10px #464652;
   -webkit-box-shadow: inset 0 0 10px #464652;
@@ -38,6 +46,10 @@ $hover-tile-height2: 15em;
   font-family: $font2;
   font-weight: 200;
   color: $color1;
+}
+
+body{
+  background-color: HSLA(240, 8%, 30%, .5);
 }
 
 /////modal popup
@@ -295,30 +307,6 @@ $hover-tile-height2: 15em;
 
 
 
-// Colors and Fonts
-$color1:HSLA(240, 8%, 30%, 1);  // gunpowder
-$color2:HSLA(345, 48%, 43%, 1); // maroon
-$color3:HSLA(356, 58%, 52%, 1); // redi-ish
-$color4:HSLA(39, 52%, 66%, 1);  // gold
-$color5:HSLA(333, 18%, 78%, 1); // silver
-$color6:HSLA(159, 24%, 76%, 1); // mint
-
-
-
-// Custom Styles
-
-
-body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-
-
-
-// Based on code by Jett Miller jettmiller.net
-
-
 /////////////////////////////////////////
 //header image and restaurant name////////////////////////////////////
 header{
@@ -337,6 +325,7 @@ header{
     display:block;
     padding-top: 10px;
     padding-bottom: 150px;
+    clear:both;
 
 
   }
@@ -355,7 +344,6 @@ header{
 //three floating boxes  (news, location, specials))/////////////////////////////
 .hover-boxes-container{
   width: 100%;
-
 
 }
 
@@ -439,6 +427,9 @@ background-size: 60%;
 background: url(http://sassyspoon.files.wordpress.com/2013/03/wood-fire-cooking.jpg);
 }
 
+.map{
+  width: 100%;
+}
 
 //////////////////////end middle boxes//////////////////////////////////
 
@@ -446,7 +437,7 @@ background: url(http://sassyspoon.files.wordpress.com/2013/03/wood-fire-cooking.
 .accord-tabs{
   float: left;
   width: 100%;
-  
+
 }
 
 
@@ -495,6 +486,55 @@ background: url(http://sassyspoon.files.wordpress.com/2013/03/wood-fire-cooking.
 header{
   background-size: 70%;
   height: 400px;
+
+  .hidden{
+    display:none;
+    height:100px;
+    width:300px;
+    background-color:white;
+    float:right;
+    border-radius:10px;
+    padding:10px;
+    margin-top:5px;
+  }
+
+  .socialmedia{
+    height:100px;
+    width:300px;
+    background-color:white;
+    float:right;
+    display:inline-block;
+    border-radius:10px;
+    padding:10px;
+    margin-top:5px;
+    opacity:.7;
+
+  }
+
+  .socialtab{
+    margin-top:5px;
+    height:100px;
+    float:right;
+    border-radius:10px;
+    opacity:.7;
+
+    width:50px;
+    background-color:white;
+  }
+
+      .icon{
+        font-size:50px;
+        padding:14px;
+      }
+
+      .icon2{
+        font-height:20px;
+        display:block;
+        padding-left:14px;
+        padding-top:5px;
+      }
+
+
 }
 .foodpics{
   display: block;
@@ -511,14 +551,7 @@ header{
 
 }
 
-.accord-tabs{
-  width: 75%;
 
-}
-  header{
-    background-size: 70%;
-    height: 400px;
-  }
 
 }
 
@@ -527,6 +560,7 @@ header{
   h1 {
     font-size:8em;
     padding-top:0px;
+    clear:both;
     }
   .hover-tile-outer{
     width:33.397%;
