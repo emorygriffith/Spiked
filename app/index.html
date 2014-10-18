@@ -98,14 +98,14 @@
 <!--       <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum.</p>
  -->
       <!--This is the beginning of the Menu section-->
-      <div class="everything">
+      <div class="menu-tab-container">
 
-           <div class="appetizers">APPETIZERS</div>
-           <div class="entrees">ENTREES</div>
-
-
-           <div class="sides">SIDES</div>
-
+           <div class="appetizers-container">APPETIZERS<hr /></div>
+            <br />
+           <div class="entrees-container">ENTREES<hr /></div>
+           <br />
+           <div class="sides-container">SIDES<hr /></div>
+            <br />
 
       </div><!--This is the end of the everything container-->
          <!--This is the end of the Menu section-->
@@ -132,28 +132,26 @@
               <p class="intro">Reserve a table</p>
 
               <p class="body">
-  <label for="text2">
-<input type="text" size="8" name="text2" value="last name" id="text2" /></label>
+                <label for="text2">
+                <input type="text" size="8" name="text2" value="last name" id="text2" /></label>
 
-<label for="text2">
-<input type="text" size="8" name="text2" value="number of guests" id="text2" /></label>
+                <label for="text2">
+                <input type="text" size="8" name="text2" value="number of guests" id="text2" /></label>
 
-<label for="text2">
-<input type="text" size="8" name="text2" value="date" id="text2" /></label>
+                <label for="text2">
+                <input type="text" size="8" name="text2" value="date" id="text2" /></label>
 
-<label for="text2">
-<input type="text" size="8" name="text2" value="time" id="text2" /></label>
-          </p>
+                <label for="text2">
+                <input type="text" size="8" name="text2" value="time" id="text2" /></label>
+              </p>
 
             </div>
           </div>
-
-
-      </p>
+        </p>
+      </div>
     </div>
   </div>
 </div>
-  </div>
 
 
   <span class="flickrPhoto"></span>
@@ -197,15 +195,25 @@
 
 
   <script type="text/template" id="menuApi">
-    <div class="item">Item: <%=item%></div>
-    <div class="price">$<%=price%>.00</div>
-    <div class="description">Description: <%=description%></div>
-    <div class="extraInfo">Allegies:<%=allergies%>  Fovorite:<%=favorite%> Spicy:<%=spicy%> Vegan:<%=vegan%></div>
+    <div class="menu-sub-item-container">
+      <span class="menuitem"><%=item%></span>
+      <span class="menuprice">$<%=price%>.00</span>
+    </div>
+    <div class= "menu-sub-description-container">
+      <div class="menudescription"><%=description%></div>
+      <div class="menuextraInfo">A:<%=allergies%>  F:<%=favorite%> S:<%=spicy%> Vegan:<%=vegan%></div>
+    </div>
   </script>
 
   <script type="text/template" id="sidesApi">
-    <div class="item">Item: <%=item%></div>
-    <div class="price">$<%=price%>.00</div>
+    <div class="side-item-price-container">
+      <span class="sideitem"><%=item%></span>
+      <span class="sideprice">$<%=price%>.00</span>
+    </div>
+    <div class="side-sub-description-container">
+      <div class="menudescription"><%=description%> placeholder</div>
+      <div class="menuextraInfo">A:<%=allergies%> F:<%=favorite%> S:<%=spicy%> Vegan:<%=vegan%></div>
+    </div>
   </script>
 
 <!-- End Andrews Menu, News, and Specials Scripts -->
