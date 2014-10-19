@@ -22,14 +22,14 @@
     <!-- endbuild -->
   </head>
   <body>
-    <div class="container">
-      <h1>Spiked</h1>
-
-      <div class="news"></div>
+    <div class="everything">
+      <div class="news">NEWS: </div>
 
 
       <div class="appetizers">APPETIZERS</div>
       <div class="entrees">ENTREES</div>
+
+
       <div class="sides">SIDES</div>
 
       <div class="special">SPECIAL</div>
@@ -52,16 +52,33 @@
         <div class="item">Item: <%=item%></div>
         <div class="price">$<%=price%>.00</div>
         <div class="description">Description: <%=description%></div>
+          <div class="extrastuff">
+
+            <img class ="algIcon" src="https://mail.google.com/mail/u/0/?ui=2&ik=67449a323a&view=fimg&th=14926301886a4c63&attid=0.3&disp=emb&realattid=ii_149262febae656e4&attbid=ANGjdJ-FSJjaEVyAkGIBO0hAGhEYlMIowCnfpfXXIzEQ0_HaOU6xVUXwUuuaIJjRmi1TwshYce8icM0GEa9jBdeiXJ8_t8p1Ij8BzwkfsSJWOstxGjwQQwggyzjcOk4&sz=-w1600-h1000&ats=1413684933547&rm=14926301886a4c63&zw&atsh=1"/>
+          <!--  <span class="allergies"><%=allergies%></span>
+-->
+            <img class ="favIcon" src="https://mail.google.com/mail/u/0/?ui=2&ik=67449a323a&view=fimg&th=14926301886a4c63&attid=0.4&disp=emb&realattid=ii_149262fea78966e6&attbid=ANGjdJ8NKJjv5swNDD19nd0kRbNItAlStaDZQY0CGBrlnMsGSim6oCRqnz2c6zcz4qtkxGiC53t-5zwkOb_rqe9bp4pQf3nevdpnc_ksVpK4mC0jhiBQAXiTPiaF-d0&sz=-w1600-h1000&ats=1413684933547&rm=14926301886a4c63&zw&atsh=1"/>
+            <!--<span class="fav"><%=favorite%></span>
+-->
+
+            <img class ="spIcon" src="https://mail.google.com/mail/u/0/?ui=2&ik=67449a323a&view=fimg&th=14926301886a4c63&attid=0.1&disp=emb&realattid=ii_149262fe75761280&attbid=ANGjdJ-8dUC2voZ67wfofYzpiTKZQ1g9o5v9v_B1-He90ggCToQgpXvFG8yscPcSSjbfQiGJLdTC2UzbFnzB4jxELm_dd9u9oQPz_ouTFoO2_AB8ouMxg-Z4MqwsbZs&sz=-w1600-h1000&ats=1413684933547&rm=14926301886a4c63&zw&atsh=1"/>
+          <!--  <span class="sp"><%=spicy%></span>
+-->
+            <img class ="vgIcon" src="https://mail.google.com/mail/u/0/?ui=2&ik=67449a323a&view=fimg&th=14926301886a4c63&attid=0.2&disp=emb&realattid=ii_149262fe9f15bf0e&attbid=ANGjdJ9cdPN-QOsWtPxq_KyM4Vk4iyTkxgVd4Z6fEW4AF6S9iPF9D7QoUdDOgrY9oMUj8wFRmj-akRRcs37xFXQ60x6_vz0f0yQ6JTl6AH1qkM5Hg1iATqLAFyQ_O8o&sz=-w1600-h1000&ats=1413684933547&rm=14926301886a4c63&zw&atsh=1"/>
+          <!--  <span class="vg"><%=vegan%></span>
+-->
+          </div>
       </script>
+
       <script type="text/template" id="sidesApi">
         <div class="item">Item: <%=item%></div>
         <div class="price">$<%=price%>.00</div>
       </script>
 
+    </div><!--This is the end of the everything container-->
 
 
 
-    </div>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>

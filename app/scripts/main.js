@@ -6,7 +6,7 @@ $(document).ready(function(){
 
     var newsTemplate = $('#newsApi').html();
     var showNews = _.template(newsTemplate);
-    var newsUrl='http://restaurantapi.apiary-mock.com/news/latest';
+    var newsUrl='http://private-2d011-restaurantapi.apiary-mock.com/news/latest';
 
     $.getJSON(newsUrl).done(
     function (pullingApi) {
@@ -21,7 +21,7 @@ $(document).ready(function(){
 
     var specialTemplate = $('#specialApi').html();
     var showSpecial = _.template(specialTemplate);
-    var specialUrl='http://restaurantapi.apiary-mock.com/menu/special';
+    var specialUrl='http://private-2d011-restaurantapi.apiary-mock.com/menu/special';
     var special_ID;
 
     $.getJSON(specialUrl).done(
@@ -36,10 +36,15 @@ $(document).ready(function(){
     var sidesTemplate = $('#sidesApi').html();
     var showSides = _.template(sidesTemplate);
 
-    var menuUrl='http://restaurantapi.apiary-mock.com/menu';
+    var menuUrl='http://private-2d011-restaurantapi.apiary-mock.com/menu';
     var app_ID;
     var sid_ID;
     var ent_ID;
+    var sp_ID;
+    var vg_ID;
+    var alg_ID;
+
+
 
 
     /*......................This is the menuApi section...................................*/
@@ -47,15 +52,53 @@ $(document).ready(function(){
 
     $.getJSON(menuUrl).done(function (pullingApi) {
 
+
       pullingApi.appetizers.forEach(function(pullingFromArray) {
           app_ID = pullingFromArray.id;
+          sp_ID =pullingFromArray.spicy;
+          vg_ID =pullingFromArray.vegan;
+          alg_ID =pullingFromArray.allergies;
+          fav_ID =pullingFromArray.favorite;
+
           $('.appetizers').append( showMenu(pullingFromArray));
 
             if(app_ID === special_ID) {
 
               $('.special').append(showMenu(pullingFromArray));
 
-            };/*...........This is the end of the if statement...............*/
+            };
+
+
+
+      if(alg_ID===1) {
+      $('.algIcon').css("background-color", "red");
+      };
+      if(alg_ID===0) {
+      $('.algIcon').css("background-color", "blue");
+      }
+
+      if(fav_ID===1) {
+      $('.favIcon').css("background-color", "red");
+      };
+
+
+      if(sp_ID===1) {
+      $('.spIcon').css("background-color", "red");
+      };
+
+
+      if(vg_ID===1) {
+      $('.vgIcon').css("background-color", "red");
+      };
+
+
+
+
+
+
+
+
+            /*...........This is the end of the if statement...............*/
 
         });/*.............This is the end of the APPETIZERS section..........*/
 
@@ -73,17 +116,23 @@ $(document).ready(function(){
 
       });/*.............This is the end of the ENTREES section..........*/
 
-  });
+
 
     pullingApi.sides.forEach(function(pullingFromArray) {
         sid_ID = pullingFromArray.id;
 
         $('.sides').append( showSides(pullingFromArray));
+
         if(sid_ID === special_ID) {
           $('.special').append(showSides(pullingFromArray));
-        };
-        });
 
-    });
+        };/*...........This is the end of the if statement...............*/
 
-});
+      });/*...........This is the end of the sides section...............*/
+
+      });/*.............This is the end of the targeting(inward) documentReady function..........*/
+
+    });/*.............This is the end for the getJSON of the menu..........*/
+
+
+});/*.............This is the end of the overall documentReady fucntion..........*/

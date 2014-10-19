@@ -4,7 +4,8 @@
 
 // Custom Styles
 
-.container{
+.everything{
+  margin-top:50px;
   margin-left:50px;
   margin-bottom:50px;
 }
@@ -64,4 +65,24 @@
   width:300px;
   margin-top:50px;
 
+}
+
+.extrastuff{
+  border:solid;
+  height:50px;
+  border-width:1px;
+}
+
+.spIcon{
+  background-color:blue;
+}
+
+.vgIcon{
+  background-color:blue;
+}
+.algIcon{
+  background-color:blue;
+}
+.favIcon{
+  background-color:blue;
 }
