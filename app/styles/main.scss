@@ -322,11 +322,15 @@ header{
  width:100%;
  height:30%;
  background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/BdPiHliNEUp0ISA/12246472246_9fca6e97d9_o.jpg');
- background-size: 70%;
+ background-size: 120%;
  background-attachment: fixed;
- background-position: top;
+ background-position: right;
 
+.spikedman{
+  margin-left: 133px;
+margin-top: -189px;
 
+}
  h1{
    @include logo;
    text-align:center;
@@ -334,7 +338,6 @@ header{
    display:block;
    padding-top: 10px;
    padding-bottom: 150px;
-
 
  }
 }
@@ -644,10 +647,7 @@ header{
 
 }
 
- header{
-   background-size: 70%;
-   height: 400px;
- }
+
 
 }
 
