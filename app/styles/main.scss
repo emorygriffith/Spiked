@@ -2,6 +2,8 @@
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/bitters/app/assets/stylesheets/base';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
+/* iconicstroke */
+
 
 
 $color1:HSLA(240, 8%, 30%, 1);  //gunpowder
@@ -14,6 +16,8 @@ $font1:'Lato';
 $font2:'PT Sans';
 $font3:'Oswald';
 $hover-tile-height2: 15em;
+
+
 
 @mixin shadow{
   -moz-box-shadow:    inset 0 0 10px #464652;
@@ -41,7 +45,7 @@ $hover-tile-height2: 15em;
 }
 
 body{
-  background-color: HSLA(240, 8%, 30%, .5);
+  background-color: HSLA(0, 0%, 84%, 1);
 }
 
 /////modal popup
@@ -196,13 +200,14 @@ body{
 
 // Based on code by Kasper Mikiewicz
 ////accordion tabs////////////////////////
-.vertical-tabs-container { // small screens: accordion
+.vertical-tabs-container {
+
   $tab-border-color: $base-border-color;
   $tab-border: 1px solid $tab-border-color;
   $tab-border-radius: $base-border-radius;
-  $tab-content-background: lighten($tab-border-color, 10);
-  $tab-active-color: $tab-content-background;
-  $tab-inactive-color: $base-background-color;
+  $tab-content-background: lighten(#A6A6A6, 10);
+  $tab-active-color: HSLA(0, 0%, 65%, 1)/* \$tab-content-background */;
+  $tab-inactive-color: #EDEEE7/* \$base-background-color */;
   $vertical-tabs-height: em(300);
   $vertical-tab-mode: $medium-screen;
 
@@ -216,7 +221,7 @@ body{
     display: none;
 
     @include media($vertical-tab-mode) {
-      background-color: $tab-inactive-color;
+      background-color: lighten(#A6A6A6, 10);
       display: inline;
       float: left;
       height: $vertical-tabs-height;
@@ -236,6 +241,15 @@ body{
         background-color: $tab-content-background;
         margin-right: -1px;
       }
+    }
+  }
+  a{
+    color: HSLA(0, 0%, 23%, .8);
+    font-family: $font2;
+    letter-spacing: .4em;
+    &:hover{
+      color:HSLA(0, 0%, 23%, 1);
+      text-decoration-color: HSLA(0, 0%, 23%, 1);
     }
   }
 
@@ -269,7 +283,7 @@ body{
   }
 
   .vertical-tab-accordion-heading {
-    background-color: $tab-inactive-color;
+    background-color: lighten(#A6A6A6, 10);
     border-top: $tab-border;
     cursor: pointer;
     display: block;
@@ -297,6 +311,9 @@ body{
 
 }
 
+h4{
+  font-family: $font1;
+}
 
 
 /////////////////////////////////////////
@@ -322,6 +339,12 @@ header{
   }
 }
 
+.logo{
+  width: 40%;
+display: inline;
+margin: -21px auto;
+margin-left: 186px;
+}
   /* ul{
     list-style-type:none;
     display: inline-block;
@@ -449,9 +472,15 @@ width: 100%;
 
 .flickrPhoto{
   float:left;
+  margin-top: 15px;
+
   img{
     height:200px;
     width:200px;
+    -moz-box-shadow: -1px -4px 20px 1px HSLA(0, 0%, 65%, 1);
+    -webkit-box-shadow: -1px -4px 20px 1px HSLA(0, 0%, 65%, 1);
+    box-shadow:-1px -4px 20px 1px HSLA(0, 0%, 65%, 1);
+    border-radius: 3px;
   }
 
 }
@@ -476,17 +505,18 @@ width: 100%;
   $grid-item-background: desaturate($base-accent-color, 30);
   $grid-item-colors:
     desaturate($base-accent-color, 30),
-    #3581A5,
-    #5FBEBE,
-    #98C79A,
-    #A7A891,
-    #BDCC97,
-    #979EA0;
+    #3A3A3A,
+    #3A3A3A,
+    #3A3A3A,
+    #3A3A3A,
+    #3A3A3A,
+    #3A3A3A;
   $grid-item-border-size: 9px;
   $grid-item-columns: 4;
   $grid-item-big-columns: 8;
-  $grid-item-color: white;
+  $grid-item-color: #3A3A3A;
   $grid-item-height: 14em;
+
 
   @include clearfix;
 
@@ -499,9 +529,10 @@ width: 100%;
     float: left;
     padding: 2em;
     border-top: 0;
-    border-bottom: $grid-item-border-size solid $grid-items-background;
-    border-left: $grid-item-border-size /2 solid $grid-items-background;
-    border-right: $grid-item-border-size /2 solid $grid-items-background;
+    background-repeat: none;
+    /* border-bottom: \$grid-item-border-size solid \$grid-items-background;
+    border-left: \$grid-item-border-size /2 solid \$grid-items-background;
+    border-right: \$grid-item-border-size /2 solid \$grid-items-background; */
     text-align: center;
     cursor: pointer;
 
@@ -518,7 +549,7 @@ width: 100%;
         &:hover {
           background-color: darken($background-from-list, 10);
           background-repeat: no-repeat;
-          background-position: top;
+
           background-size: cover;
         }
       }
@@ -540,7 +571,7 @@ width: 100%;
 
   .grid-item p {
       margin: auto;
-      color: transparentize($grid-item-color, .3);
+      color: #D6D6D6;
       @include media($medium-screen) {
         max-width: 70%;
       }
@@ -579,6 +610,16 @@ background: url(https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/RAgXG
 background: url(https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/mzyRcFcVckNB9ff/14790585967_618cded699_z.jpg);
 background-size: 100%;
 background-position: center;
+}
+.f{
+  background: url(https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/9r7dA8XiSyy8oz4/3083178166_d388bb61f4_o.jpg);
+  background-size: 100%;
+  background-position: center;
+}
+.g{
+  background: url(https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/CmC7fKlyxMxEQ42/4130883792_0286e4f2f7_z.jpg);
+  background-size: 100%;
+  background-repeat: none;
 }
 ////// media query////////////////////////////////////////////////////////////
 
