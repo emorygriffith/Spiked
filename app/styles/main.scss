@@ -3,7 +3,60 @@
 @import '../../bower_components/bitters/app/assets/stylesheets/base';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 /* iconicstroke */
+@import url(http://weloveiconfonts.com/api/?family=brandico);
 
+/* brandico */
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif;
+}
+
+
+  .hidden{
+    display:none;
+    height:100px;
+    width:300px;
+    background-color:white;
+    float:right;
+    border-radius:10px;
+    padding:10px;
+    margin-top:5px;
+  }
+
+  .socialmedia{
+    height:100px;
+    width:300px;
+    background-color:white;
+    float:right;
+    display:inline-block;
+    border-radius:10px;
+    padding:10px;
+    margin-top:5px;
+    opacity:.7;
+
+  }
+
+  .socialtab{
+    margin-top:5px;
+    height:100px;
+    float:right;
+    border-radius:10px;
+    opacity:.7;
+
+    width:50px;
+    background-color:white;
+  }
+
+      .icon{
+        font-size:50px;
+        padding:14px;
+      }
+
+      .icon2{
+        font-height:20px;
+        display:block;
+        padding-left:14px;
+        padding-top:5px;
+      }
 
 
 $color1:HSLA(240, 8%, 30%, 1);  //gunpowder
@@ -447,12 +500,14 @@ margin-bottom: -107px;
 
 }
  h1{
-   @include logo;
-   text-align:center;
-   margin: 0 auto;
-   display:block;
-   padding-top: 10px;
-   padding-bottom: 150px;
+   font-family: "Oswald";
+font-size: 8em;
+color: white;
+text-align: center;
+margin: 15px 425px;
+display: inline-block;
+padding-top: 10px;
+margin-left: 0;
 
  }
 }
@@ -924,6 +979,16 @@ header{
  background-size: 70%;
  height: 400px;
 }
+h1{
+font-family: "Oswald";
+font-size: 8em;
+color: white;
+text-align: center;
+margin: 15px 425px;
+display: inline-block;
+padding-top: 100px;
+margin-right: 0;}
+
 .foodpics{
  display: block;
 
