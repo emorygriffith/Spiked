@@ -153,3 +153,17 @@ $(document).ready(function(){
 
 
 // ************** END MENU SECTION ************** //
+
+
+//social media button entrance
+
+
+$('.socialtab').on('mouseover',function() {
+		$('.hidden').addClass('socialmedia');
+		$('.hidden').addClass('animated bounceInRight');
+	});
+
+$('.socialtab').on('mouseover',function() {
+		$('.socialtab').addClass('hidden');
+
+	});
