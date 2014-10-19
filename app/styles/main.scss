@@ -1,4 +1,4 @@
- // Bourbon & Neat
+// Bourbon & Neat
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/bitters/app/assets/stylesheets/base';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
@@ -20,187 +20,191 @@ $hover-tile-height2: 15em;
 
 
 @mixin shadow{
-  -moz-box-shadow:    inset 0 0 10px #464652;
-  -webkit-box-shadow: inset 0 0 10px #464652;
-  box-shadow:         inset 0 0 10px #464652;
+ -moz-box-shadow:    inset 0 0 10px #464652;
+ -webkit-box-shadow: inset 0 0 10px #464652;
+ box-shadow:         inset 0 0 10px #464652;
 }
 
 @mixin logo{
-  font-family: $font3;
-  color: white;
+ font-family: $font3;
+ color: white;
 
 }
 
 @mixin headingFont{
-  font-family: $font1;
-  color: $color1;
-  font-size: 1.6em;
+ font-family: $font1;
+ color: $color1;
+ font-size: 1.6em;
 
 }
 
 @mixin mainFont{
-  font-family: $font2;
-  font-weight: 200;
-  color: $color1;
+ font-family: $font2;
+ font-weight: 200;
+ color: $color1;
 }
 
 body{
+
   background-color: HSLA(0, 0%, 84%, 1);
+
+ background-color: HSLA(0, 0%, 84%, 1);
 }
 
 /////modal popup
 .modal {
-  $modal-padding: 3em;
-  $modal-background: $base-background-color;
-  $modal-close-color: $light-gray;
-  $modal-image-height: 135px;
-  $modal-image-width: $modal-image-height;
+ $modal-padding: 3em;
+ $modal-background: $base-background-color;
+ $modal-close-color: $light-gray;
+ $modal-image-height: 135px;
+ $modal-image-width: $modal-image-height;
 
-  label {
-    cursor: pointer;
-    margin-bottom: 0;
-  }
+ label {
+   cursor: pointer;
+   margin-bottom: 0;
+ }
 
-  label img {
-    $img-width: 300px;
-    border-radius: $img-width/2;
-    display: block;
-    max-width: $img-width;
-  }
+ label img {
+   $img-width: 300px;
+   border-radius: $img-width/2;
+   display: block;
+   max-width: $img-width;
+ }
 
-  input[type="checkbox"] {
-    display: none;
-  }
+ input[type="checkbox"] {
+   display: none;
+ }
 
-  .btn {
-    @include button(simple, $base-background-color);
-    font-size: 1.2em;
-    margin-bottom: $base-line-height;
-  }
+ .btn {
+   @include button(simple, $base-background-color);
+   font-size: 1.2em;
+   margin-bottom: $base-line-height;
+ }
 
-  .modal-open {
-    overflow: hidden;
-  }
+ .modal-open {
+   overflow: hidden;
+ }
 
-  .modal-window { // overlay
-    @include transition(opacity .45s ease);
-    @include position(fixed, 0px 0px 0px 0px);
-    background: rgba(0,0,0, .85);
-    opacity: 0;
-    text-align: left;
-    visibility: hidden;
-    z-index: 99999999999;
+ .modal-window { // overlay
+   @include transition(opacity .45s ease);
+   @include position(fixed, 0px 0px 0px 0px);
+   background: rgba(0,0,0, .85);
+   opacity: 0;
+   text-align: left;
+   visibility: hidden;
+   z-index: 99999999999;
 
-    .modal-bg {
-      @include position(absolute, 0px 0px 0px 0px);
-      cursor: pointer;
-    }
-  }
+   .modal-bg {
+     @include position(absolute, 0px 0px 0px 0px);
+     cursor: pointer;
+   }
+ }
 
-  .modal-close {
-    @include position(absolute, ($modal-padding /2) ($modal-padding /2) 0 0);
-    @include size(1.5em);
-    cursor: pointer;
-    background: $modal-background;
+ .modal-close {
+   @include position(absolute, ($modal-padding /2) ($modal-padding /2) 0 0);
+   @include size(1.5em);
+   cursor: pointer;
+   background: $modal-background;
 
-    &:after,
-    &:before {
-      @include position(absolute, 3px 3px 0 50%);
-      @include transform(rotate(45deg));
-      @include size(.15em 1.5em);
-      background: $modal-close-color;
-      content: '';
-      display: block;
-      margin: -3px 0 0 -1px;
-    }
+   &:after,
+   &:before {
+     @include position(absolute, 3px 3px 0 50%);
+     @include transform(rotate(45deg));
+     @include size(.15em 1.5em);
+     background: $modal-close-color;
+     content: '';
+     display: block;
+     margin: -3px 0 0 -1px;
+   }
 
-    &:hover:after,
-    &:hover:before {
-      background: darken($modal-close-color, 10);
-    }
+   &:hover:after,
+   &:hover:before {
+     background: darken($modal-close-color, 10);
+   }
 
-    &:before {
-      @include transform(rotate(-45deg));
-    }
-  }
+   &:before {
+     @include transform(rotate(-45deg));
+   }
+ }
 
-  .modal-inner {
-    @include transition(opacity .3s ease);
-    border-radius: $base-border-radius;
-    background: $modal-background;
-    margin: auto;
-    max-height: 95%;
-    position: relative;
-    overflow: scroll;
-    width: 95%;
-    padding: $modal-padding /2;
-    margin-top: .6em;
+ .modal-inner {
+   @include transition(opacity .3s ease);
+   border-radius: $base-border-radius;
+   background: $modal-background;
+   margin: auto;
+   max-height: 95%;
+   position: relative;
+   overflow: scroll;
+   width: 95%;
+   padding: $modal-padding /2;
+   margin-top: .6em;
 
-    @include media($medium-screen) {
-      padding: $modal-padding;
-      width: 60%;
-      max-height: 60%;
-      margin-top: 10em;
-    }
+   @include media($medium-screen) {
+     padding: $modal-padding;
+     width: 60%;
+     max-height: 60%;
+     margin-top: 10em;
+   }
 
-    @include media($large-screen) {
-      width: 50%;
-      margin-top: 10em;
-    }
+   @include media($large-screen) {
+     width: 50%;
+     margin-top: 10em;
+   }
 
-    h1 {
-      color: $base-font-color;
-      margin-bottom: .6em;
-      text-align: left;
-      text-transform: capitalize;
-    }
+   h1 {
+     color: $base-font-color;
+     margin-bottom: .6em;
+     text-align: left;
+     text-transform: capitalize;
+   }
 
-    p {
-      font-size: $base-font-size;
-      max-width: 100% !important;
-      padding: 0;
-      text-align: left;
+   p {
+     font-size: $base-font-size;
+     max-width: 100% !important;
+     padding: 0;
+     text-align: left;
 
-      &.intro {
-        color: $blue;
-        line-height: 1.6em;
-      }
+     &.intro {
+       color: $blue;
+       line-height: 1.6em;
+     }
 
-      &.body {
-        color: $base-font-color;
-        line-height: 1.45em;
+     &.body {
+       color: $base-font-color;
+       line-height: 1.45em;
 
-        @include media($medium-screen) {
-          @include columns(2 10em);
-        }
-      }
-    }
+       @include media($medium-screen) {
+         @include columns(2 10em);
+       }
+     }
+   }
 
-    a.cta {
-      color: white;
-      display: inline-block;
-      margin-right: .5em;
-      margin-top: 1em;
+   a.cta {
+     color: white;
+     display: inline-block;
+     margin-right: .5em;
+     margin-top: 1em;
 
-      &:last-child {
-        padding: 0 2em;
-      }
-    }
-  }
+     &:last-child {
+       padding: 0 2em;
+     }
+   }
+ }
 
-  .modal-state:checked + .modal-window {
-    opacity: 1;
-    visibility: visible;
-  }
+ .modal-state:checked + .modal-window {
+   opacity: 1;
+   visibility: visible;
+ }
 
-  .modal-state:checked + .modal-window .modal-inner {
-    top: 0;
-  }
+ .modal-state:checked + .modal-window .modal-inner {
+   top: 0;
+ }
 }
 
 // Based on code by Kasper Mikiewicz
 ////accordion tabs////////////////////////
 .vertical-tabs-container {
+
 
   $tab-border-color: $base-border-color;
   $tab-border: 1px solid $tab-border-color;
@@ -308,39 +312,156 @@ body{
     }
   }
 
+ $tab-border-color: $base-border-color;
+ $tab-border: 1px solid $tab-border-color;
+ $tab-border-radius: $base-border-radius;
+ $tab-content-background: lighten(#A6A6A6, 10);
+ $tab-active-color: HSLA(0, 0%, 65%, 1)/* \$tab-content-background */;
+ $tab-inactive-color: #EDEEE7/* \$base-background-color */;
+ $vertical-tabs-height: em(300);
+ $vertical-tab-mode: $medium-screen;
+
+ @include clearfix;
+ border-radius: $tab-border-radius;
+ border: $tab-border;
+ margin-bottom: $base-spacing;
+ overflow: hidden;
+
+ .vertical-tabs {
+   display: none;
+
+   @include media($vertical-tab-mode) {
+     background-color: lighten(#A6A6A6, 10);
+     display: inline;
+     float: left;
+     height: $vertical-tabs-height;
+     width: 20%;
+   }
+ }
+
+ .vertical-tab {
+   @include media($vertical-tab-mode) {
+     border-bottom: $tab-border;
+     display: block;
+     font-weight: bold;
+     margin-right: -1px;
+     padding: $base-spacing/2 $gutter/2;
+
+     &.is-active {
+       background-color: $tab-content-background;
+       margin-right: -1px;
+     }
+   }
+ }
+ a{
+   color: HSLA(0, 0%, 23%, .8);
+   font-family: $font2;
+   letter-spacing: .4em;
+   &:hover{
+     color:HSLA(0, 0%, 23%, 1);
+     text-decoration-color: HSLA(0, 0%, 23%, 1);
+   }
+ }
+
+ .vertical-tab:focus {
+   outline: none;
+ }
+
+ .vertical-tab-content-container {
+   display: block;
+   margin: 0 auto;
+
+   & a:focus {
+     outline: none;
+   }
+
+   @include media($vertical-tab-mode) {
+     display: inline-block;
+     @include size(80% $vertical-tabs-height);
+     background-color: $tab-content-background;
+   }
+ }
+
+ .vertical-tab-content {
+   background-color: $tab-content-background;
+   padding: $base-spacing $gutter;
+
+   @include media($vertical-tab-mode) {
+     border: none;
+     display: none;
+   }
+ }
+
+ .vertical-tab-accordion-heading {
+   background-color: lighten(#A6A6A6, 10);
+   border-top: $tab-border;
+   cursor: pointer;
+   display: block;
+   font-weight: bold;
+   padding: $base-spacing/2 $gutter/2;
+
+   &:hover {
+     color: $base-accent-color;
+   }
+
+   &:first-child {
+     border-top: none;
+   }
+
+   &.is-active {
+     background: $tab-active-color;
+     border-bottom: none;
+   }
+
+   @include media($vertical-tab-mode) {
+     display: none;
+   }
+ }
+
 
 }
 
 h4{
+
   font-family: $font1;
+
+ font-family: $font1;
 }
 
 
 /////////////////////////////////////////
 //header image and restaurant name////////////////////////////////////
 header{
-  width:100%;
-  height:30%;
-  background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/BdPiHliNEUp0ISA/12246472246_9fca6e97d9_o.jpg');
-  background-size: 70%;
-  background-attachment: fixed;
-  background-position: top;
+ width:100%;
+ height:30%;
+ background-image:URL('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/BdPiHliNEUp0ISA/12246472246_9fca6e97d9_o.jpg');
+ background-size: 100%;
+ background-attachment: fixed;
+ background-position: top;
+ background-repeat: none;
 
+.spikedman{
+margin-left: 180px;
+margin-top: -204px;
+margin-bottom: -107px;
 
-  h1{
-    @include logo;
-    text-align:center;
-    margin: 0 auto;
-    display:block;
-    padding-top: 10px;
-    padding-bottom: 150px;
+}
+ h1{
+   @include logo;
+   text-align:center;
+   margin: 0 auto;
+   display:block;
+   padding-top: 10px;
+   padding-bottom: 150px;
 
-
-  }
+ }
 }
 
 .logo{
   width: 40%;
+
+ width: 40%;
+
 display: inline;
 margin: -21px auto;
 margin-left: 186px;
@@ -350,6 +471,13 @@ margin-left: 186px;
     display: inline-block;
   text-align:center;
   } */
+
+ /* ul{
+   list-style-type:none;
+   display: inline-block;
+ text-align:center;
+ } */
+
 ////end header///////////////////////////////////////////////////
 
 
@@ -357,84 +485,84 @@ margin-left: 186px;
 
 //three floating boxes  (news, location, specials))/////////////////////////////
 .hover-boxes-container{
-  width: 100%;
+ width: 100%;
 
 }
 
 
 .hover-tile-outer {
-  $hover-tile-height: 10em;
+ $hover-tile-height: 10em;
 
-  background-position: bottom;
-  background-size: cover;
-  /* background: url(); */
-  background-size: cover;
-  /* background-color: HSLA(240, 8%, 30%, .5); */
-  height: $hover-tile-height;
-  margin-bottom: $base-line-height;
-  cursor: pointer;
+ background-position: bottom;
+ background-size: cover;
+ /* background: url(); */
+ background-size: cover;
+ /* background-color: HSLA(240, 8%, 30%, .5); */
+ height: $hover-tile-height;
+ margin-bottom: $base-line-height;
+ cursor: pointer;
 
-  float:left;
-  margin-left: -1px;
+ float:left;
+ margin-left: -1px;
 
-  @include media($medium-screen) {
-    width: 33.339%;
-  }
+ @include media($medium-screen) {
+   width: 33.339%;
+ }
 
-  .hover-tile-container {
-    height: $hover-tile-height;
-    overflow: hidden;
-  }
+ .hover-tile-container {
+   height: $hover-tile-height;
+   overflow: hidden;
+ }
 
-  .hover-tile-container:hover > .hover-tile {
-    @include transform(translate(0, -100%));
-  }
+ .hover-tile-container:hover > .hover-tile {
+   @include transform(translate(0, -100%));
+ }
 
-  .hover-tile {
-    @include transition(all, .9s ease-in-out);
-    background:inherit;
-    color: white;
-    height:inherit;
-    padding: 1em 1.5em;
-  }
+ .hover-tile {
+   @include transition(all, .9s ease-in-out);
+   background:inherit;
+   color: white;
+   height:inherit;
+   padding: 1em 1.5em;
+ }
 
-  .hover-tile-visible {
-    color: white;
-    font-size: 2em;
-    font-weight: 200;
-    padding-top: 1.5em;
-    text-align: center;
-    @include shadow;
-    font-family: $font3;
-  }
+ .hover-tile-visible {
+   color: white;
+   font-size: 2em;
+   font-weight: 200;
+   padding-top: 1.5em;
+   text-align: center;
+   @include shadow;
+   font-family: $font3;
+ }
 
-  .hover-tile-hidden {
-    background: transparentize(black, .2);
-    overflow: scroll;
-    text-align: justify;
-    h4 {
-      color: HSLA(0, 0%, 83%, 1);
-      margin-bottom: .5em;
-      font-family: $font1;
-    }
-    h5{
-      color: HSLA(0, 0%, 83%, 1);
-      font-family: $font3;
-    }
-    p {
-      color: HSLA(0, 0%, 83%, 1);
+ .hover-tile-hidden {
+   background: transparentize(black, .2);
+   overflow: scroll;
+   text-align: justify;
+   h4 {
+     color: HSLA(0, 0%, 83%, 1);
+     margin-bottom: .5em;
+     font-family: $font1;
+   }
+   h5{
+     color: HSLA(0, 0%, 83%, 1);
+     font-family: $font3;
+   }
+   p {
+     color: HSLA(0, 0%, 83%, 1);
 
-    }
-  }
+   }
+ }
 }
 .news{
-  background: url(http://sbmerge.com/wp-content/uploads/2013/01/anchor-woodfire-kitchen-santa-barbara.jpeg);
+ background: url(http://sbmerge.com/wp-content/uploads/2013/01/anchor-woodfire-kitchen-santa-barbara.jpeg);
 
 }
 
 .specials{
-  background: url(http://www.heartkitchenji.com/myimages/copy_hdr1.jpg);
-  background-attachment: scroll;
+ background: url(http://www.heartkitchenji.com/myimages/copy_hdr1.jpg);
+ background-attachment: scroll;
 }
 .location{
 /* background-size: 60%; */
@@ -443,26 +571,74 @@ width: 100%;
 }
 
 .map{
-  width: 100%;
+ width: 100%;
 }
 
 //////////////////////end middle boxes//////////////////////////////////
 
 ////main tabs (menu)///////////////////////////////////////////////////
 .accord-tabs{
-  float: left;
-  width: 100%;
+ float: left;
+ width: 100%;
+}
+.menu-tab-container{
+color: $color1;
+font-size: 1.5em;
+font-family: $font3;
+
+  .menuprice, .menudescription, .menuextraInfo, .sideprice{
+    font-size:.5em;
+    font-family: $font1;
+  }
+
+  .menuextraInfo{
+    margin: auto;
+  }
+
+  .menu-sub-item-container, .side-item-price-container{
+    @include outer-container;
+
+    .menuitem, .sideitem{
+      color: $color1;
+      font-size: .7em;
+      padding-bottom: 1%;
+      @include span-columns(9);
+    }
+
+    .menuprice, .sideprice{
+      float:right;
+      @include span-columns(3);
+    }
+  }
+
+  .menu-sub-description-container, .side-sub-description-container{
+    @include outer-container;
+    padding-bottom: 2%;
+
+    .menudescription{
+      @include span-columns(9);
+      border-right: 1px solid $color1;
+      padding-right: 1%;
+    }
+
+    .menuextraInfo{
+      float:right;
+      @include span-columns(3);
+    }
+  }
+
 }
 
+
 .interiorPic{
-  width: 100%;
+ width: 100%;
 }
 
 .interiorPic2{
-  width: 45%;
+ width: 45%;
 }
 .interiorPic3{
-  width: 45%;
+ width: 45%;
 }
 
 
@@ -471,6 +647,7 @@ width: 100%;
 ////////photo sidebar////////////////////////////////////////////////////
 
 .flickrPhoto{
+
   float:left;
   margin-top: 15px;
 
@@ -483,6 +660,19 @@ width: 100%;
     border-radius: 3px;
   }
 
+ float:left;
+ margin-top: 15px;
+
+ img{
+   height:200px;
+   width:200px;
+   -moz-box-shadow: -1px -4px 20px 1px HSLA(0, 0%, 65%, 1);
+   -webkit-box-shadow: -1px -4px 20px 1px HSLA(0, 0%, 65%, 1);
+   box-shadow:-1px -4px 20px 1px HSLA(0, 0%, 65%, 1);
+   border-radius: 3px;
+ }
+
+
 }
 
 
@@ -491,13 +681,13 @@ width: 100%;
 
 /////////map/////////////
 .map{
-  clear:both;
+ clear:both;
 }
 
 
 //photo grid///////////////////////////////////
 @mixin grid-item-columns($columns) {
-  width: (100% / 12) * $columns;
+ width: (100% / 12) * $columns;
 }
 
 .grid-items {
@@ -595,12 +785,108 @@ width: 100%;
     background-position: top;
     background-size: cover;
   }
+
+ $grid-items-background: $base-background-color;
+ $grid-item-background: desaturate($base-accent-color, 30);
+ $grid-item-colors:
+   desaturate($base-accent-color, 30),
+   #3A3A3A,
+   #3A3A3A,
+   #3A3A3A,
+   #3A3A3A,
+   #3A3A3A,
+   #3A3A3A;
+ $grid-item-border-size: 9px;
+ $grid-item-columns: 4;
+ $grid-item-big-columns: 8;
+ $grid-item-color: #3A3A3A;
+ $grid-item-height: 14em;
+
+
+ @include clearfix;
+
+ .grid-item {
+   @include transition (all 0.2s ease-in-out);
+   height: $grid-item-height;
+   /* background: \$grid-item-background; */
+   width: 100%;
+   overflow: hidden;
+   float: left;
+   padding: 2em;
+   border-top: 0;
+   background-repeat: none;
+   /* border-bottom: \$grid-item-border-size solid \$grid-items-background;
+   border-left: \$grid-item-border-size /2 solid \$grid-items-background;
+   border-right: \$grid-item-border-size /2 solid \$grid-items-background; */
+   text-align: center;
+   cursor: pointer;
+
+   @include media($large-screen) {
+     @include grid-item-columns($grid-item-columns);
+   }
+
+   @for $i from 1 to 8 {
+// assign colors from $grid-item-colors list
+     &:nth-child(#{$i}) {
+       $background-from-list: nth($grid-item-colors, $i);
+       background-color: $background-from-list;
+       box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10);
+       &:hover {
+         background-color: darken($background-from-list, 10);
+         background-repeat: no-repeat;
+
+         background-size: cover;
+       }
+     }
+   }
+ }
+
+ .grid-item img {
+     display: block;
+     height: 3em;
+     margin: auto;
+     margin-bottom: 1em;
+   }
+
+ .grid-item h1 {
+     color: $grid-item-color;
+     font-size: 1.3em;
+     margin-bottom: .4em;
+   }
+
+ .grid-item p {
+     margin: auto;
+     color: #D6D6D6;
+     @include media($medium-screen) {
+       max-width: 70%;
+     }
+   }
+
+ .grid-item-big {
+   @include media($large-screen) {
+     @include grid-item-columns($grid-item-big-columns);
+   }
+   p {
+     @include media($medium-screen) {
+       max-width: 60%;
+     }
+   }
+ }
+
+ .grid-item-image {
+
+   background-color: $grid-item-background;
+   background-repeat: no-repeat;
+   background-position: top;
+   background-size: cover;
+ }
+
 }
 
 .e{
-  background: url(https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/B3rLUvPsTClxNgR/14704689619_af51427acf_z.jpg);
-  background-size: 80%;
-  background-position: center;
+ background: url(https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/B3rLUvPsTClxNgR/14704689619_af51427acf_z.jpg);
+ background-size: 80%;
+ background-position: center;
 }
 .d{
 background: url(https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/RAgXGK5oL8IqKUA/14888266671_f39836ed00_z.jpg);
@@ -620,63 +906,71 @@ background-position: center;
   background: url(https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/CmC7fKlyxMxEQ42/4130883792_0286e4f2f7_z.jpg);
   background-size: 100%;
   background-repeat: none;
+ background: url(https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/9r7dA8XiSyy8oz4/3083178166_d388bb61f4_o.jpg);
+ background-size: 100%;
+ background-position: center;
+}
+.g{
+ background: url(https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/CmC7fKlyxMxEQ42/4130883792_0286e4f2f7_z.jpg);
+ background-size: 100%;
+ background-repeat: none;
+
 }
 ////// media query////////////////////////////////////////////////////////////
 
 @media (min-width:500px) {
 
 header{
-  background-size: 70%;
-  height: 400px;
+ background-size: 70%;
+ height: 400px;
 }
 .foodpics{
-  display: block;
+ display: block;
 
-  background-color: blue;
+ background-color: blue;
 }
 .photo{
-  border: 1px solid black;
-  background-color: red;
-  display: block;
+ border: 1px solid black;
+ background-color: red;
+ display: block;
 }
 .one{
-  height: 115px;
+ height: 115px;
 
 }
 
-  header{
-    background-size: 70%;
-    height: 400px;
-  }
+
 
 }
 
 
 @media (min-width:900px) {
-  h1 {
-    font-size:8em;
-    padding-top:0px;
-    }
-  .hover-tile-outer{
-    width:33.397%;
-  }
+  .spikedman{
+  margin-left: 180px;
+margin-top: -204px;
+margin-bottom: -107px;
+}
 
-  .accord-tabs{
-    width: 75%;
-  }
+ .hover-tile-outer{
+   width:33.397%;
+ }
 
-  .rightbox{
-    float:right;
-    display:inline-block;
-    width:20%;
-  }
-  .interiorPic{
-    width: 100%;
-  }
-  .interiorPic2{
-    width: 30%;
-  }
-  .interiorPic3{
-    width: 30%;
-  }
+ .accord-tabs{
+   width: 75%;
+ }
+
+ .rightbox{
+   float:right;
+   display:inline-block;
+   width:20%;
+ }
+ .interiorPic{
+   width: 100%;
+ }
+ .interiorPic2{
+   width: 30%;
+ }
+ .interiorPic3{
+   width: 30%;
+ }
 }
