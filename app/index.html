@@ -91,6 +91,7 @@
     <a href="#" class="js-vertical-tab vertical-tab" rel="tab2">Menu</a>
     <a href="#" class="js-vertical-tab vertical-tab" rel="tab3">Drinks</a>
     <a href="#" class="js-vertical-tab vertical-tab" rel="tab4">Reservations</a>
+    <a href="#" class="js-vertical-tab vertical-tab" rel="tab5">Reviews</a>
   </div>
 
   <div class="vertical-tab-content-container">
@@ -151,13 +152,29 @@ Gus is gonna make his move. I don't know when, I don't know where or how. All I 
 
     <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab2">Menu</a>
     <div id="tab2" class="js-vertical-tab-content vertical-tab-content">
+
       <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum.</p>
+
+
+      <!--This is the beginning of the Menu section-->
+      <div class="menu-tab-container">
+
+           <div class="appetizers-container">APPETIZERS<hr /></div>
+            <br />
+           <div class="entrees-container">ENTREES<hr /></div>
+           <br />
+           <div class="sides-container">SIDES<hr /></div>
+            <br />
+
+      </div><!--This is the end of the everything container-->
+         <!--This is the end of the Menu section-->
+
     </div>
 
     <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab3">Drinks</a>
     <div id="tab3" class="js-vertical-tab-content vertical-tab-content">
       <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>
-    </div>
+      </div>
 
 
     <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab4">Reservations</a>
@@ -175,29 +192,50 @@ Gus is gonna make his move. I don't know when, I don't know where or how. All I 
               <p class="intro">Reserve a table</p>
 
               <p class="body">
-  <label for="text2">
-<input type="text" size="8" name="text2" value="last name" id="text2" /></label>
+                <label for="text2">
+                <input type="text" size="8" name="text2" value="last name" id="text2" /></label>
 
-<label for="text2">
-<input type="text" size="8" name="text2" value="number of guests" id="text2" /></label>
+                <label for="text2">
+                <input type="text" size="8" name="text2" value="number of guests" id="text2" /></label>
 
-<label for="text2">
-<input type="text" size="8" name="text2" value="date" id="text2" /></label>
+                <label for="text2">
+                <input type="text" size="8" name="text2" value="date" id="text2" /></label>
 
-<label for="text2">
-<input type="text" size="8" name="text2" value="time" id="text2" /></label>
-          </p>
+                <label for="text2">
+                <input type="text" size="8" name="text2" value="time" id="text2" /></label>
+              </p>
 
             </div>
           </div>
-
-
-      </p>
+        </p>
+      </div>
     </div>
+
+
+    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab3">Drinks</a>
+    <div id="tab5" class="js-vertical-tab-content vertical-tab-content">
+
+      <div id="disqus_thread"></div>
+          <script type="text/javascript">
+              /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+              var disqus_shortname = 'spikedrestaurant'; // required: replace example with your forum shortname
+
+              /* * * DON'T EDIT BELOW THIS LINE * * */
+              (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
   </div>
 </div>
-  </div>
+
+
 </span>
+
 
 
 
@@ -226,6 +264,44 @@ Gus is gonna make his move. I don't know when, I don't know where or how. All I 
 
  <!-- end div class bottom -->
 
+
+
+<!-- Andrews Menu, News, and Specials Scripts -->
+
+  <script type="text/template" id="newsApi">
+    <div><%=title%></div>
+    <div><%=post%></div>
+  </script>
+
+  <script type="text/template" id="specialApi">
+    <div class="specialItem">ID: <%=id%></div>
+    <div class="menuItem">Menu Item: <%=menu_item_id%></div>
+  </script>
+
+
+  <script type="text/template" id="menuApi">
+    <div class="menu-sub-item-container">
+      <span class="menuitem"><%=item%></span>
+      <span class="menuprice">$<%=price%>.00</span>
+    </div>
+    <div class= "menu-sub-description-container">
+      <div class="menudescription"><%=description%></div>
+      <div class="menuextraInfo">A:<%=allergies%>  F:<%=favorite%> S:<%=spicy%> Vegan:<%=vegan%></div>
+    </div>
+  </script>
+
+  <script type="text/template" id="sidesApi">
+    <div class="side-item-price-container">
+      <span class="sideitem"><%=item%></span>
+      <span class="sideprice">$<%=price%>.00</span>
+    </div>
+    <div class="side-sub-description-container">
+      <div class="menudescription"><%=description%> placeholder</div>
+      <div class="menuextraInfo">A:<%=allergies%> F:<%=favorite%> S:<%=spicy%> Vegan:<%=vegan%></div>
+    </div>
+  </script>
+
+<!-- End Andrews Menu, News, and Specials Scripts -->
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>

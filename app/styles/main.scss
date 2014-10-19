@@ -458,6 +458,54 @@ width: 100%;
  float: left;
  width: 100%;
 }
+.menu-tab-container{
+color: $color1;
+font-size: 1.5em;
+font-family: $font3;
+
+  .menuprice, .menudescription, .menuextraInfo, .sideprice{
+    font-size:.5em;
+    font-family: $font1;
+  }
+
+  .menuextraInfo{
+    margin: auto;
+  }
+
+  .menu-sub-item-container, .side-item-price-container{
+    @include outer-container;
+
+    .menuitem, .sideitem{
+      color: $color1;
+      font-size: .7em;
+      padding-bottom: 1%;
+      @include span-columns(9);
+    }
+
+    .menuprice, .sideprice{
+      float:right;
+      @include span-columns(3);
+    }
+  }
+
+  .menu-sub-description-container, .side-sub-description-container{
+    @include outer-container;
+    padding-bottom: 2%;
+
+    .menudescription{
+      @include span-columns(9);
+      border-right: 1px solid $color1;
+      padding-right: 1%;
+    }
+
+    .menuextraInfo{
+      float:right;
+      @include span-columns(3);
+    }
+  }
+
+}
+
 
 .interiorPic{
  width: 100%;

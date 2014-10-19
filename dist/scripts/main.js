@@ -1,7 +1,6 @@
-<<<<<<< HEAD
+
 // ************** FLICKR API SECTION ************** //
-=======
->>>>>>> 2491e0ea4af517c30fde75125646e7686302e3ac
+
 //assign your api key equal to a variable
 var apiKey = '5543de5f4fb6de6783119447abc9951e';
 
@@ -110,7 +109,7 @@ $(document).ready(function(){
 
       pullingApi.appetizers.forEach(function(pullingFromArray) {
           app_ID = pullingFromArray.id;
-          $('.appetizers').append( showMenu(pullingFromArray));
+          $('.appetizers-container').append( showMenu(pullingFromArray));
 
             if(app_ID === special_ID) {
 
@@ -124,7 +123,7 @@ $(document).ready(function(){
 
       pullingApi.entrees.forEach(function(pullingFromArray) {
           ent_ID = pullingFromArray.id;
-          $('.entrees').append( showMenu(pullingFromArray));
+          $('.entrees-container').append( showMenu(pullingFromArray));
 
             if(ent_ID === special_ID) {
 
@@ -139,7 +138,7 @@ $(document).ready(function(){
     pullingApi.sides.forEach(function(pullingFromArray) {
         sid_ID = pullingFromArray.id;
 
-        $('.sides').append( showSides(pullingFromArray));
+        $('.sides-container').append( showSides(pullingFromArray));
         if(sid_ID === special_ID) {
           $('.special').append(showSides(pullingFromArray));
         };
