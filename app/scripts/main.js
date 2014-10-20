@@ -38,13 +38,6 @@ $(document).ready(function(){
 
     var menuUrl='http://private-2d011-restaurantapi.apiary-mock.com/menu';
     var app_ID;
-    var sid_ID;
-    var ent_ID;
-    var sp_ID;
-    var vg_ID;
-    var alg_ID;
-
-
 
 
     /*......................This is the menuApi section...................................*/
@@ -67,35 +60,6 @@ $(document).ready(function(){
               $('.special').append(showMenu(pullingFromArray));
 
             };
-
-
-
-      if(alg_ID===1) {
-      $('.algIcon').css("background-color", "red");
-      };
-      if(alg_ID===0) {
-      $('.algIcon').css("background-color", "blue");
-      }
-
-      if(fav_ID===1) {
-      $('.favIcon').css("background-color", "red");
-      };
-
-
-      if(sp_ID===1) {
-      $('.spIcon').css("background-color", "red");
-      };
-
-
-      if(vg_ID===1) {
-      $('.vgIcon').css("background-color", "red");
-      };
-
-
-
-
-
-
 
 
             /*...........This is the end of the if statement...............*/

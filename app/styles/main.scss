@@ -1,8 +1,11 @@
  // Bourbon & Neat
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
-
 // Custom Styles
+
+
+
+
 
 .everything{
   margin-top:50px;
@@ -73,16 +76,16 @@
   border-width:1px;
 }
 
-.spIcon{
-  background-color:blue;
+.icons {
+  margin-top:5px;
+  padding:4px;
+  float:left;
+  margin-left:10px;
+  border:solid;
+  border-width:4px;
+  border-radius:300px;
 }
 
-.vgIcon{
-  background-color:blue;
-}
-.algIcon{
-  background-color:blue;
-}
 .favIcon{
-  background-color:blue;
+  padding:9px;
 }

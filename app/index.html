@@ -53,20 +53,26 @@
         <div class="price">$<%=price%>.00</div>
         <div class="description">Description: <%=description%></div>
           <div class="extrastuff">
+          <% if(allergies){ %>
+          <img class ="algIcon icons" src="https://mail.google.com/mail/u/0/?ui=2&ik=67449a323a&view=fimg&th=1492cf1afeca27bf&attid=0.1&disp=inline&realattid=f_i1hmzm5a0&safe=1&attbid=ANGjdJ_V9yyeVQi_AFFb5PeJ-58F_SDG0OCpHEJDFVOoYmrkG-a3ZnbS3Sfyt8H3RxyoURmFt0HHL-mVnKoPIXccxZMaIKCSi1TeB-CYNw4c9jZSpREMN1uKybumRYU&ats=1413798278468&rm=1492cf1afeca27bf&zw&sz=w1085-h503"/>
+          <div class="warning">May Contain food allergies<div>
+          <% };
 
-            <img class ="algIcon" src="https://mail.google.com/mail/u/0/?ui=2&ik=67449a323a&view=fimg&th=14926301886a4c63&attid=0.3&disp=emb&realattid=ii_149262febae656e4&attbid=ANGjdJ-FSJjaEVyAkGIBO0hAGhEYlMIowCnfpfXXIzEQ0_HaOU6xVUXwUuuaIJjRmi1TwshYce8icM0GEa9jBdeiXJ8_t8p1Ij8BzwkfsSJWOstxGjwQQwggyzjcOk4&sz=-w1600-h1000&ats=1413684933547&rm=14926301886a4c63&zw&atsh=1"/>
-          <!--  <span class="allergies"><%=allergies%></span>
--->
-            <img class ="favIcon" src="https://mail.google.com/mail/u/0/?ui=2&ik=67449a323a&view=fimg&th=14926301886a4c63&attid=0.4&disp=emb&realattid=ii_149262fea78966e6&attbid=ANGjdJ8NKJjv5swNDD19nd0kRbNItAlStaDZQY0CGBrlnMsGSim6oCRqnz2c6zcz4qtkxGiC53t-5zwkOb_rqe9bp4pQf3nevdpnc_ksVpK4mC0jhiBQAXiTPiaF-d0&sz=-w1600-h1000&ats=1413684933547&rm=14926301886a4c63&zw&atsh=1"/>
-            <!--<span class="fav"><%=favorite%></span>
--->
+          if(favorite){ %>
+            <a class="favFunc" href="#">
+            <img class ="favIcon icons" src="https://mail.google.com/mail/u/0/?ui=2&ik=67449a323a&view=fimg&th=1492ce8c740943d0&attid=0.1&disp=inline&realattid=f_i1hmn3l40&safe=1&attbid=ANGjdJ9DEEQM9PzeqLJA0GWtC5ieX7-A2cDXnX24cGrO2wQal6Fzyt7wuKzrMavHEPdd8cbIaKZQaSPIi3PS7H-FTaebEPDazLE-U4co-BgzejVys_2AtLVEFUt9bkY&ats=1413797695787&rm=1492ce8c740943d0&zw&sz=w1085-h503"/>
+            </a>
 
-            <img class ="spIcon" src="https://mail.google.com/mail/u/0/?ui=2&ik=67449a323a&view=fimg&th=14926301886a4c63&attid=0.1&disp=emb&realattid=ii_149262fe75761280&attbid=ANGjdJ-8dUC2voZ67wfofYzpiTKZQ1g9o5v9v_B1-He90ggCToQgpXvFG8yscPcSSjbfQiGJLdTC2UzbFnzB4jxELm_dd9u9oQPz_ouTFoO2_AB8ouMxg-Z4MqwsbZs&sz=-w1600-h1000&ats=1413684933547&rm=14926301886a4c63&zw&atsh=1"/>
-          <!--  <span class="sp"><%=spicy%></span>
--->
-            <img class ="vgIcon" src="https://mail.google.com/mail/u/0/?ui=2&ik=67449a323a&view=fimg&th=14926301886a4c63&attid=0.2&disp=emb&realattid=ii_149262fe9f15bf0e&attbid=ANGjdJ9cdPN-QOsWtPxq_KyM4Vk4iyTkxgVd4Z6fEW4AF6S9iPF9D7QoUdDOgrY9oMUj8wFRmj-akRRcs37xFXQ60x6_vz0f0yQ6JTl6AH1qkM5Hg1iATqLAFyQ_O8o&sz=-w1600-h1000&ats=1413684933547&rm=14926301886a4c63&zw&atsh=1"/>
-          <!--  <span class="vg"><%=vegan%></span>
--->
+          <% };
+
+          if(spicy){ %>
+            <img class ="spIcon icons" src="https://mail.google.com/mail/u/0/?ui=2&ik=67449a323a&view=fimg&th=1492ce40b898301d&attid=0.1&disp=inline&realattid=f_i1hmgatj0&safe=1&attbid=ANGjdJ-CT9DGFt_cp6s9BYtClckcuPXoEXz6ZDlJqE2T2WNAupML0fI_T0fswZoU8FHC-5Df1WBMnhGElMnIK2YbdxvCL7mjykc913oBxu03SgdAYVnZGVJqoy4muSU&ats=1413797384562&rm=1492ce40b898301d&zw&sz=w1085-h503"/>
+          <% };
+
+          if(vegan){ %>
+          <img class ="vgIcon icons" src="http://icons.iconarchive.com/icons/icons8/windows-8/24/Food-Vegan-Symbol-icon.png"/>
+          <% }; %>
+
           </div>
       </script>
 
