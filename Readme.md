@@ -3,7 +3,7 @@
 The following students participated in this project.
 
 * Emory Griffith - https://github.com/emorygriffith
-* Chelsea Franz - github.com/chelseafranz
+* Chelsea Franz - https://github.com/chelseafranz
 * Andrew El Masry - https://github.com/elmasrya
 * Max Ehnert - https://github.com/maxehnert
 
