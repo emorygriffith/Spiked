@@ -17,39 +17,26 @@
 
   </head>
   <body>
-<<<<<<< HEAD
     <header>
+<div class="socialtab">
+          <span class="icon2 brandico-facebook-rect"></span>
+          <span class="icon2 brandico-twitter-bird"></span>
+          <span class="icon2 brandico-instagram"></span>
+
+        </div>
+        <div class="hidden">
+          <span class="icon brandico-facebook-rect"></span>
+          <span class="icon brandico-twitter-bird"></span>
+          <span class="icon brandico-instagram"></span>
+        </div>
+
         <!-- <h1> Spiked </h1> -->
-  <img class="spikedman" src="https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/OaEoO64VEd8q7Ml/Untitled%20drawing.png"/>
+  <h1>Spiked</h1>
+
     </header>
-=======
-
-  <header>
-
-
-      <div class="socialicons">
-        <span class="social brandico-facebook-rect"></span>
-        <span class="social brandico-twitter-bird"></span>
-        <span class="social brandico-instagram"></span>
-      </div>
-
-      <h1> Spiked </h1>
-
-  </header>
-
-
-
->>>>>>> emory
-
-
-
-
-
-  <div class="hover-tile-outer">
 
 <div class="hover-boxes-container">
   <div class="hover-tile-outer news">
-
   <div class="hover-tile-container">
     <div class="hover-tile hover-tile-visible">
       News
@@ -62,7 +49,6 @@
       <a href= >Read more</a>
       </p>
     </div>
-
   </div>
 </div>
 
@@ -99,29 +85,6 @@
 
 
 
-<<<<<<< HEAD
-=======
-  <div class="foodpics">
-
-    <ol>Food Photos...
-
-      <li class="photo">1<li>
-      <li class="photo">2<li>
-      <li class="photo">3<li>
-      <li class="photo">4<li>
-      <li class="photo">5<li>
-
-    </ol>
-
-  </div>
-
-
-
-
-
-
-</div> <!-- end div class bottom -->
->>>>>>> emory
 
 
 <!-- //menu/reservations tab -->
@@ -193,11 +156,9 @@ Gus is gonna make his move. I don't know when, I don't know where or how. All I 
 
     <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab2">Menu</a>
     <div id="tab2" class="js-vertical-tab-content vertical-tab-content">
-<<<<<<< HEAD
-      <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum.</p>
-=======
-<!--       <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum.</p>
- -->
+
+
+
       <!--This is the beginning of the Menu section-->
       <div class="menu-tab-container">
 
@@ -210,12 +171,17 @@ Gus is gonna make his move. I don't know when, I don't know where or how. All I 
 
       </div><!--This is the end of the everything container-->
          <!--This is the end of the Menu section-->
->>>>>>> 46ae3ce1f604feda1546db63466d25c100a4bede
+
     </div>
 
     <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab3">Drinks</a>
     <div id="tab3" class="js-vertical-tab-content vertical-tab-content">
       <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>
+        <div class="drinks">
+          <img class="drink" src="http://www.esquire.com/cm/esquire/images/9W/jameson-on-the-rocks-0609-lg.jpg" height=200px width=200px>
+          <img class="drink" src="http://www.delish.com/cm/delish/images/bx/SMIR_GreenAppleMartini_hires-xl.jpg" height=200px width=200px>
+          <img class="drink" src="http://www.zscafe.com/wp-content/uploads/2014/04/wine-glass.jpg" height=200px width=200px>
+        </div>
       </div>
 
 
@@ -306,8 +272,7 @@ Gus is gonna make his move. I don't know when, I don't know where or how. All I 
 
  <!-- end div class bottom -->
 
-<<<<<<< HEAD
-=======
+
 
 <!-- Andrews Menu, News, and Specials Scripts -->
 
@@ -329,24 +294,40 @@ Gus is gonna make his move. I don't know when, I don't know where or how. All I 
     </div>
     <div class= "menu-sub-description-container">
       <div class="menudescription"><%=description%></div>
-      <div class="menuextraInfo">A:<%=allergies%>  F:<%=favorite%> S:<%=spicy%> Vegan:<%=vegan%></div>
+      <div class="extrastuff menuextraInfo">
+        <% if(allergies){ %>
+        <img class ="algIcon icons" src="../images/warning2.png"/>
+        <% };
+
+        if(favorite){ %>
+          <a class="favFunc" href="#">
+          <img class ="favIcon icons" src="../images/star138.png"/>
+          </a>
+
+        <% };
+
+        if(spicy){ %>
+          <img class ="spIcon icons" src="../images/chilis.png"/>
+        <% };
+
+        if(vegan){ %>
+        <img class ="vgIcon icons" src="../images/Food-Vegan-Symbol-icon.png"/>
+        <% }; %>
+      </div>
     </div>
   </script>
-
   <script type="text/template" id="sidesApi">
     <div class="side-item-price-container">
       <span class="sideitem"><%=item%></span>
       <span class="sideprice">$<%=price%>.00</span>
     </div>
     <div class="side-sub-description-container">
-      <div class="menudescription"><%=description%> placeholder</div>
-      <div class="menuextraInfo">A:<%=allergies%> F:<%=favorite%> S:<%=spicy%> Vegan:<%=vegan%></div>
+      <div class="menudescription"><%=description%></div>
+
     </div>
   </script>
 
 <!-- End Andrews Menu, News, and Specials Scripts -->
-
->>>>>>> 46ae3ce1f604feda1546db63466d25c100a4bede
     <script src="scripts/vendor.js"></script>
           <script src="scripts/google.js"></script>
         <script src="scripts/main.js"></script>
