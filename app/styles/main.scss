@@ -11,6 +11,7 @@
 }
 
 
+
   .hidden{
     display:none;
     height:100px;
@@ -493,10 +494,7 @@ header{
  background-position: top;
  background-repeat: none;
 
-.spikedman{
-margin-left: 180px;
-margin-top: -204px;
-margin-bottom: -107px;
+
 
 }
  h1{
@@ -509,7 +507,7 @@ display: inline-block;
 padding-top: 10px;
 margin-left: 0;
 
- }
+
 }
 
 .logo{
@@ -984,10 +982,17 @@ font-family: "Oswald";
 font-size: 8em;
 color: white;
 text-align: center;
+<<<<<<< HEAD
 margin: 15px 425px;
 display: inline-block;
 padding-top: 100px;
 margin-right: 0;}
+=======
+display: inline-block;
+padding-top: 89px;
+margin-right: 0;
+margin-left: 409px;
+>>>>>>> f8f9d6d6e97eafdd25f38ec2816e624bbdf2d5fc
 
 .foodpics{
  display: block;
@@ -1038,4 +1043,5 @@ margin-bottom: -107px;
  .interiorPic3{
    width: 30%;
  }
+}
 }
