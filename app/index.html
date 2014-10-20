@@ -298,18 +298,36 @@ Gus is gonna make his move. I don't know when, I don't know where or how. All I 
     </div>
     <div class= "menu-sub-description-container">
       <div class="menudescription"><%=description%></div>
-      <div class="menuextraInfo">A:<%=allergies%>  F:<%=favorite%> S:<%=spicy%> Vegan:<%=vegan%></div>
+      <div class="extrastuff menuextraInfo">
+        <% if(allergies){ %>
+        <img class ="algIcon icons" src="../images/warning2.png"/>
+        <% };
+
+        if(favorite){ %>
+          <a class="favFunc" href="#">
+          <img class ="favIcon icons" src="../images/star138.png"/>
+          </a>
+
+        <% };
+
+        if(spicy){ %>
+          <img class ="spIcon icons" src="../images/chilis.png"/>
+        <% };
+
+        if(vegan){ %>
+        <img class ="vgIcon icons" src="../images/Food-Vegan-Symbol-icon.png"/>
+        <% }; %>
+      </div>
     </div>
   </script>
-
   <script type="text/template" id="sidesApi">
     <div class="side-item-price-container">
       <span class="sideitem"><%=item%></span>
       <span class="sideprice">$<%=price%>.00</span>
     </div>
     <div class="side-sub-description-container">
-      <div class="menudescription"><%=description%> placeholder</div>
-      <div class="menuextraInfo">A:<%=allergies%> F:<%=favorite%> S:<%=spicy%> Vegan:<%=vegan%></div>
+      <div class="menudescription"><%=description%></div>
+
     </div>
   </script>
 

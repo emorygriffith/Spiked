@@ -659,11 +659,17 @@ font-family: $font3;
       @include span-columns(9);
       border-right: 1px solid $color1;
       padding-right: 1%;
+      padding-bottom: 2%;
     }
 
     .menuextraInfo{
       float:right;
       @include span-columns(3);
+      margin-top: 1%;
+
+      .icons{
+        margin-top:1%;
+      }
     }
   }
 
