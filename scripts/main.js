@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 // ************** FLICKR API SECTION ************** //
 
@@ -16,14 +15,6 @@ var test = $.getJSON(flickrUrl).done(function(x){
     $('.flickrPhoto').append(rendered_temp1(y));
 		});
 	});
-=======
-console.log('The Iron Yard Rocks');
-
-
-$('.news').on('click', function(){
-  $('.news').addClass('.large');
-})
->>>>>>> emory
 
 // ************** END FLICKR API SECTION ************** //
 
@@ -162,3 +153,17 @@ $(document).ready(function(){
 
 
 // ************** END MENU SECTION ************** //
+
+
+//social media button entrance
+
+
+$('.socialtab').on('mouseover',function() {
+		$('.hidden').addClass('socialmedia');
+		$('.hidden').addClass('animated bounceInRight');
+	});
+
+$('.socialtab').on('mouseover',function() {
+		$('.socialtab').addClass('hidden');
+
+	});
